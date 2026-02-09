@@ -74,7 +74,7 @@ Justin Latuszek`,
 
 eine konkrete Frage: Wissen Sie, wie viel Betriebsvermögen Sie jeden Monat steuerfrei in Ihr Privatvermögen überführen könnten?
 
-Die meisten IT-Geschäftsführer kennen diese Zahl nicht. Dabei liegt sie im Schnitt zwischen €500 und €9.000 pro Monat. Ich kann Ihnen in 10 Minuten sagen, was bei {{Firmenname}} möglich ist. Kostenlos, unverbindlich.
+Die meisten IT-Geschäftsführer kennen diese Zahl nicht. Dabei liegt sie im Schnitt zwischen €500 und €9.000 pro Monat. Ich kann Ihnen in 10 Minuten sagen, was bei {{Firmenname}} möglich ist. Ohne Kosten, unverbindlich.
 
 Ein kurzes "Ja" reicht.
 
@@ -84,7 +84,7 @@ Justin Latuszek`,
 
 ich schreibe Ihnen nochmal, weil ich überzeugt bin, dass bei {{Firmenname}} im {{Kerngeschaeft}}-Bereich Potenzial liegt.
 
-Die meisten IT-Geschäftsführer kennen diese Zahl nicht. Dabei liegt sie im Schnitt zwischen €500 und €9.000 pro Monat. Ich kann Ihnen in 10 Minuten sagen, was bei {{Firmenname}} möglich ist. Kostenlos, unverbindlich.
+Die meisten IT-Geschäftsführer kennen diese Zahl nicht. Dabei liegt sie im Schnitt zwischen €500 und €9.000 pro Monat. Ich kann Ihnen in 10 Minuten sagen, was bei {{Firmenname}} möglich ist. Ohne Kosten, unverbindlich.
 
 Ein kurzes "Ja" reicht.
 
@@ -167,7 +167,7 @@ Justin Latuszek`,
 
 ich fasse es kurz: Ein Geschäftsführer aus dem {{Kerngeschaeft}}-Bereich hat mit unserer Methode im ersten Jahr €54.000 steuerfrei in sein Privatvermögen überführt. Sein Steuerberater war eingebunden, kein Zusatzaufwand.
 
-Ich kann Ihnen in 10 Minuten zeigen, ob das auch für {{Firmenname}} funktioniert. Kostenlos, unverbindlich, kein Vertrag.
+Ich kann Ihnen in 10 Minuten zeigen, ob das auch für {{Firmenname}} funktioniert. Ohne Kosten, ohne Verpflichtung.
 
 Interesse?
 
@@ -177,7 +177,7 @@ Justin Latuszek`,
 
 kurze Frage: Hat Ihr Steuerberater Sie dieses Jahr proaktiv angerufen, um Ihnen zu zeigen, wie Sie Betriebsvermögen steuerfrei verschieben?
 
-Falls nicht, geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Ich kann Ihnen in 10 Minuten zeigen, ob das auch für {{Firmenname}} funktioniert. Kostenlos, unverbindlich, kein Vertrag.
+Falls nicht, geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Ich kann Ihnen in 10 Minuten zeigen, ob das auch für {{Firmenname}} funktioniert. Ohne Kosten, ohne Verpflichtung.
 
 Interesse?
 
@@ -206,7 +206,7 @@ Hat Ihr Steuerberater Sie dieses Jahr proaktiv angerufen, um Ihnen zu zeigen, wi
 
 Falls ja, top, Mail löschen. Falls nein, dann geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Und das kostet im Schnitt 70k pro Jahr.
 
-Ich sage Ihnen in 10 Minuten, was bei Ihnen möglich ist. Kostenlos, kein Haken.
+Ich sage Ihnen in 10 Minuten, was bei Ihnen möglich ist. Ohne Kosten, ohne Bedingungen.
 
 Kurzes "Ja" reicht. Kurzes "Nein" auch, ist Ihr Geld, nicht meins.
 
@@ -225,7 +225,7 @@ Wissen Sie, wie viel Geld jeden Monat in Ihrer GmbH liegen bleibt, das steuerfre
 
 Falls Sie die Zahl kennen, Hut ab, Mail löschen. Falls nicht, dann ist das genau die Lücke, die GmbH-Geschäftsführer im Schnitt 70k pro Jahr kostet.
 
-10 Minuten, kostenlos, und Sie haben die Zahl.
+10 Minuten, ohne Kosten, und Sie haben die Zahl.
 
 Wollen Sie's wissen oder lieber nicht?
 
@@ -246,7 +246,7 @@ Wissen Sie, wie viel das pro Jahr wäre?
 
 Wenn Sie beides mit Ja beantworten, alles gut, löschen Sie die Mail. Wenn nicht, dann lassen Sie gerade fünfstellig pro Jahr liegen. Wie über 2.000 Geschäftsführer vor Ihnen.
 
-Ich prüfe das in 10 Minuten. Kostenlos. Kein Gespräch, kein Vertrag.
+Ich prüfe das in 10 Minuten. Ohne Kosten. Kein Gespräch, keine Verpflichtung.
 
 "Ja" reicht.
 
