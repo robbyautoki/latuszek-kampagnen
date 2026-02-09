@@ -31,7 +31,7 @@ export const campaigns: Campaign[] = [
         timing: "Tag 0",
         subjectA: "{{Firmenname}} + Steuern",
         subjectB: "steuerersparnis {{firmenname}}",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich habe mir {{Firmenname}} angesehen und eine Frage: Wissen Sie, wie viel Geld Ihnen jährlich durch fehlende Steuergestaltung entgeht?
 
@@ -49,7 +49,7 @@ Justin Latuszek`,
         timing: "Tag +3",
         subjectA: "Kurze Ergänzung",
         subjectB: "eine zahl zu {{firmenname}}",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich wollte eine konkrete Zahl nachliefern:
 
@@ -69,7 +69,7 @@ Justin Latuszek`,
         timing: "Tag +8",
         subjectA: "Interesse oder Ruhe?",
         subjectB: "letzte frage, {{Vorname}}",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich melde mich ein letztes Mal.
 
@@ -96,7 +96,7 @@ Justin Latuszek`,
         timing: "Tag 0",
         subjectA: "2.000 GFs wissen mehr",
         subjectB: "was andere GFs anders machen",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich arbeite mit GmbH-Geschäftsführern, die jedes Jahr fünfstellige Beträge an Steuern sparen. Legal und ohne Tricks.
 
@@ -114,7 +114,7 @@ Justin Latuszek`,
         timing: "Tag +4",
         subjectA: "€54.000 Ergebnis",
         subjectB: "ein GF aus {{Branche}}",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich wollte ein konkretes Beispiel teilen:
 
@@ -134,7 +134,7 @@ Justin Latuszek`,
         timing: "Tag +9",
         subjectA: "Passt nicht? Kein Problem",
         subjectB: "kurzes Update",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich melde mich ein letztes Mal zu diesem Thema.
 
@@ -161,7 +161,7 @@ Justin Latuszek`,
         timing: "Tag 0",
         subjectA: "{{Vorname}}, unbequeme Frage",
         subjectB: "eine frage zu {{firmenname}}",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich stelle GmbH-Geschäftsführern eine Frage, die viele nicht hören wollen:
 
@@ -181,7 +181,7 @@ Justin Latuszek`,
         timing: "Tag +3",
         subjectA: "Eine Rechnung für Sie",
         subjectB: "€500 bis €9.000 monatlich",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich wollte meine letzte Nachricht konkreter machen:
 
@@ -201,7 +201,7 @@ Justin Latuszek`,
         timing: "Tag +8",
         subjectA: "Ich gebe auf, {{Vorname}}",
         subjectB: "drei möglichkeiten",
-        body: `Guten Tag {{Vorname}},
+        body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 drei Möglichkeiten, warum ich nichts von Ihnen gehört habe:
 

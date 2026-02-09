@@ -149,6 +149,8 @@ export default function Home() {
         <section className="text-center py-8 space-y-2">
           <p className="text-sm text-muted-foreground">
             Zielgruppe: GmbH-Geschäftsführer &middot; CTA: Antwort auf E-Mail &middot; Platzhalter:{" "}
+            <code className="bg-muted px-1 rounded text-xs">{"{{Anrede}}"}</code>,{" "}
+            <code className="bg-muted px-1 rounded text-xs">{"{{Nachname}}"}</code>,{" "}
             <code className="bg-muted px-1 rounded text-xs">{"{{Vorname}}"}</code>,{" "}
             <code className="bg-muted px-1 rounded text-xs">{"{{Firmenname}}"}</code>,{" "}
             <code className="bg-muted px-1 rounded text-xs">{"{{Branche}}"}</code>
