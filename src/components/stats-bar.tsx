@@ -1,6 +1,8 @@
 "use client";
 
 import { stats } from "@/data/campaigns";
+import { AnimatedCounter } from "@/components/animated-counter";
+import { AnimatedSection } from "@/components/animated-section";
 
 const statItems = [
   { label: "Betreute GFs", value: stats.clients },
@@ -13,14 +15,21 @@ const statItems = [
 export function StatsBar() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-      {statItems.map((stat) => (
-        <div
-          key={stat.label}
-          className="text-center p-4 bg-card rounded-xl border border-border/60 shadow-sm"
-        >
-          <div className="text-2xl font-bold text-primary">{stat.value}</div>
-          <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-        </div>
+      {statItems.map((stat, i) => (
+        <AnimatedSection key={stat.label} delay={i * 100} animation="fade-up">
+          <div
+            className="glass-card text-center p-6 rounded-2xl border-gradient-brand
+                        hover:-translate-y-1 hover:shadow-premium-hover
+                        transition-all duration-500 ease-out"
+          >
+            <div className="text-3xl font-bold text-gradient-brand tracking-tight">
+              <AnimatedCounter value={stat.value} duration={2000} />
+            </div>
+            <div className="text-xs text-muted-foreground mt-2 font-medium uppercase tracking-wider">
+              {stat.label}
+            </div>
+          </div>
+        </AnimatedSection>
       ))}
     </div>
   );
