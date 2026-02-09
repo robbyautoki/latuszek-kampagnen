@@ -126,7 +126,7 @@ export function LeadTable({ campaign }: { campaign: Campaign }) {
                     {lead.firma}
                   </td>
                   <td className="px-4 py-3 text-[#86868b] font-mono text-xs">
-                    {lead.email}
+                    {lead.email.replace(/^(.{3})[^@]*@/, "$1***@")}
                   </td>
                   <td className="px-4 py-3 text-[#86868b] whitespace-nowrap">
                     {lead.stadt || "\u2013"}

@@ -33,7 +33,7 @@ export const campaigns: Campaign[] = [
         subjectB: "steuerersparnis {{firmenname}}",
         body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
-ich habe mir {{Firmenname}} angesehen und eine Frage: Wissen Sie, wie viel Geld Ihnen jährlich durch fehlende Steuergestaltung entgeht?
+ich habe mir {{Firmenname}} im Bereich {{Kerngeschaeft}} angesehen und eine Frage: Wissen Sie, wie viel Geld Ihnen jährlich durch fehlende Steuergestaltung entgeht?
 
 Die meisten Geschäftsführer sind überrascht. Unsere Mandanten sparen im Schnitt €73.485 pro Jahr. Durch legale Möglichkeiten, die viele Steuerberater nicht auf dem Schirm haben.
 
@@ -61,7 +61,7 @@ Soll ich Ihnen eine unverbindliche Einschätzung für Ihre Situation schicken?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Ein Mandant aus dem {{Branche}}-Bereich sagte neulich: \"Mein Steuerberater macht gute Buchhaltung. Aber proaktive Steuergestaltung? Dafür brauchte ich einen Spezialisten.\""
+        ps: "Ein Mandant aus dem {{Kerngeschaeft}}-Bereich sagte neulich: \"Mein Steuerberater macht gute Buchhaltung. Aber proaktive Steuergestaltung? Dafür brauchte ich einen Spezialisten.\""
       },
       {
         id: "1.3",
@@ -113,7 +113,7 @@ Justin Latuszek`,
         title: "Follow-up 1",
         timing: "Tag +4",
         subjectA: "€54.000 Ergebnis",
-        subjectB: "ein GF aus {{Branche}}",
+        subjectB: "ein GF aus dem {{Kerngeschaeft}}-Bereich",
         body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich wollte ein konkretes Beispiel teilen:

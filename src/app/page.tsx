@@ -199,7 +199,7 @@ export default function Home() {
             Zielgruppe: GmbH-Geschäftsführer &middot; CTA: Antwort auf E-Mail
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-            {["Anrede", "Nachname", "Vorname", "Firmenname", "Branche"].map(
+            {["Anrede", "Nachname", "Vorname", "Firmenname", "Branche", "Kerngeschaeft"].map(
               (p) => (
                 <code
                   key={p}
