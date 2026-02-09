@@ -2,68 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 
-const steps = [
-  {
-    number: "01",
-    title: "Zielgruppe definieren",
-    description:
-      "GmbH-Geschäftsführer mit 1–50 Mitarbeitern in Deutschland. Fokus auf die 5 Branchen mit den meisten Käufern:",
-    bullets: [
-      "IT / Software (32%)",
-      "Bau / Immobilien (23%)",
-      "Beratung / Agenturen (18%)",
-      "E-Commerce / Handel (14%)",
-      "Handwerk / Produktion (13%)",
-    ],
-  },
-  {
-    number: "02",
-    title: "Lead-Listen aufbauen",
-    description:
-      "Kontakte aus 3 Hauptquellen sammeln und mit personalisierten Daten anreichern.",
-    bullets: [
-      "Handelsregister – GF-Wechsel, Neugründungen als Trigger",
-      "Bundesanzeiger – Jahresabschlüsse für Umsatz/Gewinn-Daten",
-      "LinkedIn – Profil-Besuche & Connection Requests als Touchpoint",
-    ],
-  },
-  {
-    number: "03",
-    title: "Technisches Setup",
-    description:
-      "Bevor die erste Mail rausgeht: Separate Sending-Domain einrichten (z.B. mail.latuszek-partner.de), SPF, DKIM und DMARC konfigurieren. Dann 4 Wochen Domain-Warmup – von 10 Mails/Tag langsam auf 150–200 hochfahren.",
-  },
-  {
-    number: "04",
-    title: "Kampagne zuordnen",
-    description: "Jede der 3 Kampagnen passt zu einem anderen Käufertyp:",
-    bullets: [
-      'Kampagne 1 \u201EDer Steuer-Weckruf\u201C \u2192 IT, Bau, Neugr\u00FCnder (8\u201312% Response)',
-      'Kampagne 2 \u201EDer Beweis\u201C \u2192 Beratung, Handwerk, risikoscheue GFs (10\u201315% Response)',
-      'Kampagne 3 \u201EDie Herausforderung\u201C \u2192 E-Commerce, digital-affine GFs (6\u201310% Response)',
-    ],
-  },
-  {
-    number: "05",
-    title: "Multi-Channel starten",
-    description:
-      "LinkedIn + E-Mail über 10 Tage kombinieren. 6 Touchpoints insgesamt – ergibt +287% mehr Antworten als nur E-Mail.",
-    bullets: [
-      "Tag 0–1: LinkedIn Profil besuchen & Connection Request",
-      "Tag 2: Mail 1 – Erstansprache",
-      "Tag 5: Mail 2 – Follow-up mit neuem Angle",
-      "Tag 7: LinkedIn Post liken/kommentieren",
-      "Tag 10: Mail 3 – Breakup mit offenem Ende",
-    ],
-  },
-  {
-    number: "06",
-    title: "Messen & optimieren",
-    description:
-      "Ziel: 45–65% Open Rate, 8–15% Response Rate, 3–5% Meeting Rate. Beste Monate: Oktober bis Februar. Beste Tage: Dienstag & Mittwoch, 9–11 Uhr. Juni–August und Dezember vermeiden.",
-  },
-];
-
 export default function NaechsteStepsPage() {
   return (
     <div className="min-h-screen">
@@ -80,7 +18,7 @@ export default function NaechsteStepsPage() {
               className="invert"
             />
             <p className="text-sm text-[#86868b] hidden sm:block font-medium">
-              Nächste Steps
+              N&auml;chste Steps
             </p>
           </div>
           <nav className="flex items-center gap-6">
@@ -111,47 +49,90 @@ export default function NaechsteStepsPage() {
         <AnimatedSection animation="fade">
           <section className="pt-40 pb-16 sm:pt-48 sm:pb-20">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white leading-[1.05]">
-              Nächste Steps
+              N&auml;chste Steps
             </h1>
             <p className="text-[#86868b] text-lg max-w-2xl leading-relaxed mt-4">
-              Der Fahrplan in 6 Schritten &ndash; von der Zielgruppe bis zum
-              laufenden Outreach.
+              Was jetzt passieren muss, um die Kampagnen live zu bringen.
             </p>
           </section>
         </AnimatedSection>
 
-        {/* Steps */}
-        <div className="pb-20">
-          {steps.map((step, i) => (
-            <AnimatedSection key={step.number} delay={i * 60} animation="fade">
-              <div className="flex gap-6 py-10 border-t border-white/[0.06]">
-                <span className="text-2xl font-bold text-accent tabular-nums flex-shrink-0">
-                  {step.number}
-                </span>
-                <div>
-                  <h2 className="text-xl font-semibold text-white tracking-tight">
-                    {step.title}
-                  </h2>
-                  <p className="text-[#86868b] text-sm leading-relaxed mt-2">
-                    {step.description}
-                  </p>
-                  {step.bullets && (
-                    <ul className="mt-3 space-y-1.5">
-                      {step.bullets.map((b) => (
-                        <li
-                          key={b}
-                          className="text-sm text-[#a1a1a6] leading-relaxed"
-                        >
-                          {b}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
+        {/* Step 01: Zielgruppe erweitern */}
+        <AnimatedSection animation="fade">
+          <div className="flex gap-6 py-10 border-t border-white/[0.06]">
+            <span className="text-2xl font-bold text-accent tabular-nums flex-shrink-0">
+              01
+            </span>
+            <div>
+              <h2 className="text-xl font-semibold text-white tracking-tight">
+                Zielgruppe erweitern
+              </h2>
+              <p className="text-[#86868b] text-sm leading-relaxed mt-2">
+                Aktuell haben wir nur die Zielgruppe aus Ihren Antworten:
+                Manufacturing &amp; Logistics, 11&ndash;50 Mitarbeiter. Aber
+                83% der echten K&auml;ufer kommen aus anderen Branchen.
+              </p>
+
+              <p className="text-sm font-medium text-white mt-6">
+                Was uns noch fehlt:
+              </p>
+              <ul className="mt-3 space-y-2">
+                {[
+                  "IT / Software \u2013 32% der K\u00E4ufer, gr\u00F6\u00DFte Einzelbranche",
+                  "Bau / Immobilien \u2013 23% der K\u00E4ufer",
+                  "Beratung / Agenturen \u2013 18% der K\u00E4ufer",
+                  "E-Commerce / Handel \u2013 14% der K\u00E4ufer",
+                  "Handwerk / Produktion \u2013 13% der K\u00E4ufer",
+                  "Kleinstunternehmen mit 1\u201310 Mitarbeitern \u2013 \u00FCber 60% der K\u00E4ufer",
+                  "Weibliche Gesch\u00E4ftsf\u00FChrerinnen \u2013 23% der K\u00E4ufer",
+                  "UG- und Holding-Strukturen",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="text-sm text-[#a1a1a6] leading-relaxed"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* Step 02: Cold Email Kampagnen */}
+        <AnimatedSection animation="fade">
+          <div className="flex gap-6 py-10 border-t border-white/[0.06]">
+            <span className="text-2xl font-bold text-accent tabular-nums flex-shrink-0">
+              02
+            </span>
+            <div>
+              <h2 className="text-xl font-semibold text-white tracking-tight">
+                Cold Email Kampagnen erstellen
+              </h2>
+              <p className="text-[#86868b] text-sm leading-relaxed mt-2">
+                F&uuml;r jedes neue Segment erstellen wir passende Cold Email
+                Kampagnen &ndash; genau wie die 3 Kampagnen auf dieser Webseite.
+                Je 3 E-Mails pro Kampagne, personalisiert mit{" "}
+                {"{{Anrede}}"}, {"{{Firmenname}}"} und {"{{Branche}}"}.
+              </p>
+
+              <ul className="mt-5 space-y-2">
+                {[
+                  'Kampagne 1 \u201EDer Steuer-Weckruf\u201C \u2192 f\u00FCr IT, Bau, Neugr\u00FCnder',
+                  'Kampagne 2 \u201EDer Beweis\u201C \u2192 f\u00FCr Beratung, Handwerk',
+                  'Kampagne 3 \u201EDie Herausforderung\u201C \u2192 f\u00FCr E-Commerce, digital-affine GFs',
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="text-sm text-[#a1a1a6] leading-relaxed"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </AnimatedSection>
 
         {/* Footer */}
         <section className="text-center py-16 border-t border-white/[0.06]">
@@ -178,7 +159,7 @@ export default function NaechsteStepsPage() {
             </Link>
           </div>
           <p className="text-xs text-[#48484a] pt-4">
-            Erstellt für Latuszek Finanzberatung GmbH
+            Erstellt f&uuml;r Latuszek Finanzberatung GmbH
           </p>
         </section>
       </main>
