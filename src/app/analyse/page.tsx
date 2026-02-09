@@ -23,7 +23,7 @@ export default function AnalysePage() {
     <div className="min-h-screen">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl">
-        <div className="max-w-4xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <Image
               src="/logo.png"
@@ -46,7 +46,7 @@ export default function AnalysePage() {
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 sm:px-8">
+      <main className="max-w-5xl mx-auto px-6 sm:px-8">
         {/* Hero */}
         <AnimatedSection animation="fade">
           <section className="pt-40 pb-20 sm:pt-48 sm:pb-24">
