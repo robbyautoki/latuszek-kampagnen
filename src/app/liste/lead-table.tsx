@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { PasswordGate } from "@/components/password-gate";
 import { AnimatedSection } from "@/components/animated-section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import leads from "@/data/leads.json";
@@ -112,7 +111,7 @@ export function LeadTable({ campaigns }: { campaigns: Campaign[] }) {
   const pageData = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
-    <PasswordGate>
+    <>
       {/* Stats */}
       <AnimatedSection animation="fade">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 py-12 border-t border-white/[0.06]">
@@ -338,6 +337,6 @@ export function LeadTable({ campaigns }: { campaigns: Campaign[] }) {
           </div>
         </div>
       </section>
-    </PasswordGate>
+    </>
   );
 }
