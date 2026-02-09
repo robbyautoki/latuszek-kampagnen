@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { PasswordGate } from "@/components/password-gate";
 import { AnimatedSection } from "@/components/animated-section";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import leads from "@/data/leads.json";
 import type { Campaign } from "@/data/campaigns";
 
@@ -21,7 +22,75 @@ interface Lead {
 const typedLeads = leads as Lead[];
 const PAGE_SIZE = 50;
 
-export function LeadTable({ campaign }: { campaign: Campaign }) {
+function EmailCard({ email }: { email: Campaign["emails"][0] }) {
+  const [showBodyB, setShowBodyB] = useState(false);
+  const hasBodyB = email.bodyB && email.bodyB !== email.body;
+
+  return (
+    <div className="border border-white/[0.06] rounded-lg overflow-hidden">
+      {/* Email Header */}
+      <div className="px-6 py-4 bg-[#1d1d1f] flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="text-xs font-medium text-accent tabular-nums">
+            Mail {email.id}
+          </span>
+          <span className="text-xs text-[#86868b]">
+            {email.title}
+          </span>
+        </div>
+        <span className="text-xs text-[#48484a]">
+          {email.timing}
+        </span>
+      </div>
+
+      {/* Subject Lines */}
+      <div className="px-6 py-3 border-b border-white/[0.06]">
+        <p className="text-xs text-[#86868b] mb-1">Betreff A:</p>
+        <p className="text-sm text-white">{email.subjectA}</p>
+        <p className="text-xs text-[#86868b] mt-2 mb-1">Betreff B:</p>
+        <p className="text-sm text-white">{email.subjectB}</p>
+      </div>
+
+      {/* Body with A/B toggle */}
+      <div className="px-6 py-5">
+        {hasBodyB && (
+          <div className="flex items-center gap-2 mb-4">
+            <button
+              onClick={() => setShowBodyB(false)}
+              className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+                !showBodyB
+                  ? "bg-accent text-white"
+                  : "text-[#86868b] hover:text-white"
+              }`}
+            >
+              Variante A
+            </button>
+            <button
+              onClick={() => setShowBodyB(true)}
+              className={`px-3 py-1 text-xs font-medium rounded-full transition-colors ${
+                showBodyB
+                  ? "bg-accent text-white"
+                  : "text-[#86868b] hover:text-white"
+              }`}
+            >
+              Variante B
+            </button>
+          </div>
+        )}
+        <p className="text-sm text-[#a1a1a6] leading-relaxed whitespace-pre-wrap">
+          {showBodyB && hasBodyB ? email.bodyB : email.body}
+        </p>
+        {email.ps && (
+          <p className="text-sm text-accent/70 leading-relaxed mt-4 italic">
+            {email.ps}
+          </p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function LeadTable({ campaigns }: { campaigns: Campaign[] }) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
 
@@ -168,68 +237,95 @@ export function LeadTable({ campaign }: { campaign: Campaign }) {
       <section className="py-12 border-t border-white/[0.06]">
         <AnimatedSection animation="fade">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">
-            Kampagne 1: &ldquo;{campaign.name}&rdquo;
+            Kampagnen
           </h2>
-          <p className="text-[#86868b] text-sm mb-4">
-            {campaign.framework} \u00B7 {campaign.tone}
-          </p>
-          <p className="text-sm text-[#a1a1a6] leading-relaxed mb-10">
-            Diese 3 E-Mails werden an die IT-Segment Leads verschickt.
-            Jede E-Mail enth\u00E4lt Platzhalter die automatisch mit den
-            Lead-Daten bef\u00FCllt werden.
+          <p className="text-sm text-[#a1a1a6] leading-relaxed mb-8">
+            2 Kampagnen-Varianten mit je 3 E-Mails. Jede Mail hat A/B-Tests
+            f&uuml;r Betreff und Body.
           </p>
         </AnimatedSection>
 
-        <div className="space-y-8">
-          {campaign.emails.map((email, i) => (
-            <AnimatedSection key={email.id} delay={i * 80} animation="fade">
-              <div className="border border-white/[0.06] rounded-lg overflow-hidden">
-                {/* Email Header */}
-                <div className="px-6 py-4 bg-[#1d1d1f] flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-medium text-accent tabular-nums">
-                      Mail {email.id}
-                    </span>
-                    <span className="text-xs text-[#86868b]">
-                      {email.title}
-                    </span>
-                  </div>
-                  <span className="text-xs text-[#48484a]">
-                    {email.timing}
-                  </span>
-                </div>
+        <Tabs defaultValue="1">
+          <div className="flex justify-center mb-10">
+            <TabsList className="inline-flex rounded-full bg-[#1d1d1f] p-1">
+              {campaigns.map((c) => (
+                <TabsTrigger
+                  key={c.id}
+                  value={String(c.id)}
+                  className="rounded-full px-6 py-2.5 text-sm font-medium text-[#86868b] transition-colors data-[state=active]:bg-accent data-[state=active]:text-white data-[state=active]:shadow-none"
+                >
+                  Kampagne {c.id}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
-                {/* Subject Lines */}
-                <div className="px-6 py-3 border-b border-white/[0.06]">
-                  <p className="text-xs text-[#86868b] mb-1">Betreff A:</p>
-                  <p className="text-sm text-white">{email.subjectA}</p>
-                  <p className="text-xs text-[#86868b] mt-2 mb-1">Betreff B:</p>
-                  <p className="text-sm text-white">{email.subjectB}</p>
-                </div>
-
-                {/* Body */}
-                <div className="px-6 py-5">
-                  <p className="text-sm text-[#a1a1a6] leading-relaxed whitespace-pre-wrap">
-                    {email.body}
+          {campaigns.map((campaign) => (
+            <TabsContent key={campaign.id} value={String(campaign.id)}>
+              <AnimatedSection animation="fade">
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold text-white tracking-tight">
+                    &ldquo;{campaign.name}&rdquo;
+                  </h3>
+                  <p className="text-[#86868b] text-sm mt-1">
+                    {campaign.framework} &middot; {campaign.tone}
                   </p>
-                  {email.ps && (
-                    <p className="text-sm text-accent/70 leading-relaxed mt-4 italic">
-                      {email.ps}
-                    </p>
-                  )}
+                  <p className="text-xs text-[#48484a] mt-1">
+                    {campaign.angle}
+                  </p>
                 </div>
+              </AnimatedSection>
+
+              <div className="space-y-8">
+                {campaign.emails.map((email, i) => (
+                  <AnimatedSection key={email.id} delay={i * 80} animation="fade">
+                    <EmailCard email={email} />
+                  </AnimatedSection>
+                ))}
               </div>
-            </AnimatedSection>
+
+              {/* Sequence Timeline */}
+              <AnimatedSection animation="fade">
+                <div className="py-12">
+                  <h4 className="text-lg font-semibold text-white tracking-tight mb-8">
+                    Sequenz-Ablauf
+                  </h4>
+                  <div className="flex items-start justify-between gap-4">
+                    {campaign.emails.map((email, i) => (
+                      <div
+                        key={email.id}
+                        className="flex items-center gap-4 flex-1 min-w-0"
+                      >
+                        <div className="flex flex-col items-center text-center flex-shrink-0">
+                          <div className="w-8 h-8 rounded-full border border-accent/40 flex items-center justify-center text-xs font-medium text-white">
+                            {i + 1}
+                          </div>
+                          <span className="text-xs text-[#86868b] mt-3">
+                            {email.timing}
+                          </span>
+                          <span className="text-xs text-[#a1a1a6] font-medium mt-0.5">
+                            {email.title}
+                          </span>
+                        </div>
+                        {i < campaign.emails.length - 1 && (
+                          <div className="flex-1 h-px min-w-8 bg-accent/15 mt-4" />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </AnimatedSection>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
 
         {/* Placeholders Reference */}
-        <div className="mt-10 text-center">
+        <div className="mt-6 text-center">
           <p className="text-xs text-[#48484a] mb-3">
             Verf\u00FCgbare Platzhalter f\u00FCr diese Liste:
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2">
-            {["Anrede", "Vorname", "Nachname", "Firmenname", "Kerngeschaeft", "Branche"].map(
+            {["Anrede", "Vorname", "Nachname", "Firmenname", "Kerngeschaeft"].map(
               (p) => (
                 <code
                   key={p}

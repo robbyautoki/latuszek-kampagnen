@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
-import { campaigns } from "@/data/campaigns";
+import { itCampaigns } from "@/data/it-campaigns";
 import { LeadTable } from "./lead-table";
 
 export default function ListePage() {
-  const campaign = campaigns[0]; // Kampagne 1: "Der Steuer-Weckruf"
 
   return (
     <div className="min-h-screen">
@@ -59,20 +58,20 @@ export default function ListePage() {
         <AnimatedSection animation="fade">
           <section className="pt-40 pb-16 sm:pt-48 sm:pb-20">
             <p className="text-[#86868b] text-sm font-medium uppercase tracking-widest mb-6">
-              IT-Segment \u00B7 Kampagne 1
+              IT-Segment · 2 Kampagnen
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white leading-[1.05]">
               Lead-Liste
             </h1>
             <p className="text-[#86868b] text-lg max-w-2xl leading-relaxed mt-4">
-              3.459 bereinigte Kontakte f\u00FCr Kampagne 1 &ldquo;{campaign.name}&rdquo;.
-              GmbH-Gesch\u00E4ftsf\u00FChrer im IT-Segment, Deutschland.
+              3.130 bereinigte Kontakte mit 2 Kampagnen-Varianten.
+              GmbH-Geschäftsführer im IT-Segment, Deutschland.
             </p>
           </section>
         </AnimatedSection>
 
         {/* Password-protected content */}
-        <LeadTable campaign={campaign} />
+        <LeadTable campaigns={itCampaigns} />
 
         {/* Footer */}
         <section className="text-center py-16 border-t border-white/[0.06]">

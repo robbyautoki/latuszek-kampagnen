@@ -5,6 +5,7 @@ export interface Email {
   subjectA: string;
   subjectB: string;
   body: string;
+  bodyB?: string;
   ps: string;
 }
 
