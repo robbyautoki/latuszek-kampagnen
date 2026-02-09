@@ -52,7 +52,7 @@ export default function ListePage() {
         <AnimatedSection animation="fade">
           <section className="pt-40 pb-16 sm:pt-48 sm:pb-20">
             <p className="text-[#86868b] text-sm font-medium uppercase tracking-widest mb-6">
-              IT-Segment · 2 Kampagnen
+              IT-Segment · 3 Kampagnen
             </p>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-white leading-[1.05]">
               Lead-Liste

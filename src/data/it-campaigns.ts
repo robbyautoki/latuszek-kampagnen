@@ -6,7 +6,7 @@ export const itCampaigns: Campaign[] = [
     name: "Der IT-Steuervorteil",
     framework: "PAS (Problem, Agitation, Solution)",
     tone: "Kompetent, lösungsorientiert, direkt",
-    angle: "IT-GFs digitalisieren alles, außer ihre Steuerstruktur",
+    angle: "IT-GF digitalisieren alles, außer ihre Steuerstruktur",
     emails: [
       {
         id: "A.1",
@@ -99,19 +99,19 @@ Justin Latuszek`,
     name: "Der Branchen-Insider",
     framework: "BAB (Before, After, Bridge) + Social Proof",
     tone: "Nahbar, vertrauensbildend, branchenspezifisch",
-    angle: "Andere GFs aus dem {{Kerngeschaeft}}-Bereich sparen bereits fünfstellig",
+    angle: "Andere GF aus dem {{Kerngeschaeft}}-Bereich sparen bereits fünfstellig",
     emails: [
       {
         id: "B.1",
         title: "Erstansprache",
         timing: "Tag 0",
-        subjectA: "2.000 GFs wissen mehr",
+        subjectA: "2.000 GF wissen mehr",
         subjectB: "gmbh-steuern im {{Kerngeschaeft}}",
         body: `Sehr geehrte{{Anrede}} {{Nachname}},
 
 ich arbeite mit vielen Geschäftsführern aus dem {{Kerngeschaeft}}-Bereich, die jedes Jahr fünfstellige Beträge an Steuern sparen. Legal und ohne Tricks.
 
-Die Methode: Betriebsvermögen steuerfrei ins Privatvermögen überführen. €500 bis €9.000 monatlich. Über 2.000 GFs nutzen das bereits, mit durchschnittlich €73.485 weniger Steuern pro Jahr.
+Die Methode: Betriebsvermögen steuerfrei ins Privatvermögen überführen. €500 bis €9.000 monatlich. Über 2.000 GF nutzen das bereits, mit durchschnittlich €73.485 weniger Steuern pro Jahr.
 
 Wäre das auch für {{Firmenname}} interessant?
 
@@ -121,7 +121,7 @@ Justin Latuszek`,
 
 ich kenne immer mehr Geschäftsführer aus dem {{Kerngeschaeft}}-Bereich, die ihre Steuerlast deutlich senken, und frage mich, ob {{Firmenname}} das auch nutzt.
 
-Die Methode: Betriebsvermögen steuerfrei ins Privatvermögen überführen. €500 bis €9.000 monatlich. Über 2.000 GFs nutzen das bereits, mit durchschnittlich €73.485 weniger Steuern pro Jahr.
+Die Methode: Betriebsvermögen steuerfrei ins Privatvermögen überführen. €500 bis €9.000 monatlich. Über 2.000 GF nutzen das bereits, mit durchschnittlich €73.485 weniger Steuern pro Jahr.
 
 Wäre das auch für {{Firmenname}} interessant?
 

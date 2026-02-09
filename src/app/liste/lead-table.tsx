@@ -240,7 +240,7 @@ export function LeadTable({ campaigns }: { campaigns: Campaign[] }) {
             Kampagnen
           </h2>
           <p className="text-sm text-[#a1a1a6] leading-relaxed mb-8">
-            2 Kampagnen-Varianten mit je 3 E-Mails. Jede Mail hat A/B-Tests
+            3 Kampagnen-Varianten mit je 3 E-Mails. Jede Mail hat A/B-Tests
             f&uuml;r Betreff und Body.
           </p>
         </AnimatedSection>
