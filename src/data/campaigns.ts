@@ -41,7 +41,7 @@ Wäre das interessant für Sie?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Ich habe bisher über 2.000 GmbH-Geschäftsführer bei genau diesem Thema begleitet. Die häufigste Reaktion: \"Warum wusste ich das nicht früher?\""
+        ps: "Ich habe bisher über 2.000 GmbH-Geschäftsführer bei genau diesem Thema begleitet. Die häufigste Reaktion: \"Warum hat mir das mein Steuerberater nie gesagt?\""
       },
       {
         id: "1.2",
@@ -53,7 +53,7 @@ Justin Latuszek`,
 
 ich wollte eine konkrete Zahl nachliefern:
 
-Viele unserer Mandanten wandeln monatlich €500 bis €9.000 aus ihrem Firmenvermögen in Privatvermögen um. Steuerfrei, ohne Sozialabgaben.
+Viele unserer Mandanten wandeln monatlich €500 bis €9.000 aus ihrem Betriebsvermögen in Privatvermögen um. Steuerfrei, ohne Sozialabgaben. Ihr Steuerberater bleibt dabei voll eingebunden.
 
 Einmal aufgesetzt, läuft die Struktur. Ohne Mehraufwand im Tagesgeschäft.
 
@@ -61,7 +61,7 @@ Soll ich Ihnen eine unverbindliche Einschätzung für Ihre Situation schicken?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Ein Mandant aus dem {{Branche}}-Bereich sagte neulich: \"Das war die beste finanzielle Entscheidung meiner Karriere als Geschäftsführer.\""
+        ps: "Ein Mandant aus dem {{Branche}}-Bereich sagte neulich: \"Mein Steuerberater macht gute Buchhaltung. Aber proaktive Steuergestaltung? Dafür brauchte ich einen Spezialisten.\""
       },
       {
         id: "1.3",
@@ -75,11 +75,11 @@ ich melde mich ein letztes Mal.
 
 Ich weiß, als Geschäftsführer ist die Inbox voll. Falls Steueroptimierung gerade kein Thema ist, kein Problem, ich höre auf.
 
-Falls doch: Ein kurzes "Ja" reicht. Dann schicke ich Ihnen die Details, wie bei Ihrer GmbH eine jährliche Ersparnis im fünfstelligen Bereich möglich wäre.
+Falls doch: Schauen wir einfach, ob es zu Ihrer Situation passt. Ein kurzes "Ja" reicht. Wenn es nicht passt, sage ich Ihnen das ehrlich.
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Allein im letzten Quartal haben 47 Geschäftsführer mit uns gestartet. Manchmal ist es nur eine Mail, die den Unterschied macht."
+        ps: "Allein im letzten Quartal haben 47 Geschäftsführer mit uns gestartet. Übrigens: Wir ersetzen keinen Steuerberater. Wir ergänzen ihn dort, wo er nicht hinkommt."
       }
     ]
   },
@@ -106,7 +106,7 @@ Wäre das auch für {{Firmenname}} interessant?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Ich bin neugierig: Kennt Ihr Steuerberater das Thema Vermögensübertragung aus der GmbH? Die meisten tun es nicht. Genau da setzen wir an."
+        ps: "Ich bin neugierig: Kommt Ihr Steuerberater proaktiv auf Sie zu mit Vorschlägen zur Vermögensübertragung? Die meisten tun es nicht. Genau da setzen wir an. Nicht als Ersatz, sondern als Ergänzung."
       },
       {
         id: "2.2",
@@ -118,15 +118,15 @@ Justin Latuszek`,
 
 ich wollte ein konkretes Beispiel teilen:
 
-Ein Geschäftsführer in einer ähnlichen Situation hat angefangen, monatlich €4.500 steuerfrei aus seiner GmbH in Privatvermögen zu überführen. Pro Jahr über €54.000, die vorher beim Finanzamt gelandet wären.
+Ein Geschäftsführer mit drei GmbHs hat angefangen, monatlich €4.500 steuerfrei aus seinem Betriebsvermögen in Privatvermögen zu überführen. Pro Jahr über €54.000, die vorher beim Finanzamt gelandet wären.
 
-Sein Kommentar: "Warum hat mir das niemand früher gesagt?"
+Sein Kommentar: "Mein Steuerberater macht gute Buchhaltung. Aber das hier? Dafür brauchte ich einen Spezialisten."
 
 Wäre so ein Ergebnis auch für Sie relevant?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Die Umsetzung ist unkompliziert. Einmal richtig aufgesetzt, läuft es. Kein Zusatzaufwand im Tagesgeschäft."
+        ps: "Die Umsetzung ist unkompliziert. Einmal richtig aufgesetzt, läuft es. Ihr Steuerberater bleibt dabei eingebunden. Kein Zusatzaufwand für Sie."
       },
       {
         id: "2.3",
@@ -138,13 +138,13 @@ Justin Latuszek`,
 
 ich melde mich ein letztes Mal zu diesem Thema.
 
-Ich verstehe, dass nicht jeder Zeitpunkt der richtige ist. Sollte das Thema Steueroptimierung für Ihre GmbH irgendwann relevant werden: Ein kurzes "Ja" genügt, und ich schicke Ihnen unverbindlich die Infos.
+Ich verstehe, dass nicht jeder Zeitpunkt der richtige ist. Sollte das Thema Steueroptimierung für Ihre GmbH irgendwann relevant werden: Schauen wir einfach, ob es zu Ihrer Situation passt. Ein kurzes "Ja" genügt.
 
 Ansonsten wünsche ich Ihnen weiterhin viel Erfolg mit {{Firmenname}}.
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Kleiner Denkanstoß: Unsere Mandanten sparen im Schnitt €73.485 pro Jahr. Das summiert sich über 5 Jahre auf über €367.000 mehr Privatvermögen."
+        ps: "Kleiner Denkanstoß: Unsere Mandanten sparen im Schnitt €73.485 pro Jahr. Das sind über 5 Jahre €367.000 mehr Privatvermögen. Und Ihr bestehender Steuerberater bleibt an Bord."
       }
     ]
   },
@@ -165,9 +165,9 @@ Justin Latuszek`,
 
 ich stelle GmbH-Geschäftsführern eine Frage, die viele nicht hören wollen:
 
-Ihr Steuerberater macht Ihre Buchhaltung. Aber kümmert er sich auch darum, wie Sie Firmenvermögen maximal steuerfrei in Privatvermögen überführen?
+Ihr Steuerberater macht Ihre Buchhaltung. Aber kümmert er sich proaktiv darum, wie Sie Betriebsvermögen steuerfrei in Privatvermögen überführen?
 
-Das sind zwei komplett verschiedene Dinge. Und genau diese Lücke kostet die meisten GFs zwischen €30.000 und €100.000 pro Jahr.
+Das sind zwei komplett verschiedene Dinge. Wie beim Arzt: Allgemeinmediziner und Chirurg. Und genau diese Lücke kostet die meisten GFs zwischen €30.000 und €100.000 pro Jahr.
 
 Wollen Sie wissen, ob das auch auf Sie zutrifft?
 
@@ -187,7 +187,7 @@ ich wollte meine letzte Nachricht konkreter machen:
 
 Stellen Sie sich vor, Sie entnehmen jeden Monat €500 bis €9.000 aus Ihrer GmbH. Steuerfrei, ohne Sozialabgaben.
 
-Klingt unrealistisch? Über 2.000 Geschäftsführer nutzen genau das bereits. Durchschnittliche Ersparnis: €73.485 im Jahr.
+Klingt unrealistisch? Über 2.000 Geschäftsführer nutzen genau das bereits. Durchschnittliche Ersparnis: €73.485 im Jahr. Keine 0815-Lösung, sondern individuell auf Ihre GmbH zugeschnitten.
 
 Soll ich die Rechnung mal für Ihre Situation aufmachen?
 
@@ -206,10 +206,10 @@ Justin Latuszek`,
 drei Möglichkeiten, warum ich nichts von Ihnen gehört habe:
 
 1. Sie zahlen wirklich gerne Steuern. (Respekt.)
-2. Der Zeitpunkt passt gerade nicht. (Verstehe ich.)
+2. Der Zeitpunkt passt gerade nicht. (Absolut verständlich.)
 3. Meine Mails sind im Spam gelandet. (Das wäre schade.)
 
-Falls 2 oder 3: Ein kurzes "Interesse" reicht, dann schicke ich Ihnen einmal die Details.
+Falls 2 oder 3: Ein kurzes "Interesse" reicht. Wir schauen dann einfach, ob es zu Ihrer Situation passt.
 
 Falls 1: Hut ab. Dann streiche ich Sie von meiner Liste.
 
@@ -224,12 +224,14 @@ Justin Latuszek`,
 export const optimizations = [
   { rule: "Mit \"Ich\" starten", data: "+93% Replies (SalesLoft, 6M Mails)" },
   { rule: "PS-Zeile in jeder Mail", data: "Meistgelesener Teil der E-Mail" },
-  { rule: "Interest-CTA statt Meeting-CTA", data: "30% vs 15% Response" },
+  { rule: "Interest-CTA statt Meeting-CTA", data: "85% der Nicht-Käufer buchen Follow-ups, kommen aber nicht" },
   { rule: "50-100 Wörter", data: "54 = Sweet Spot" },
-  { rule: "Max 2-3 kurze Absätze", data: "+58% Reply Rate" },
+  { rule: "Steuerberater-Kooperation betonen", data: "76% der Nicht-Käufer scheitern am Steuerberater-Blocker" },
   { rule: "Betreff ≤ 33 Zeichen", data: "65% öffnen auf Mobilgerät" },
-  { rule: "Einfache Sprache", data: "+67% Reply Rate" },
+  { rule: "\"Schauen wir, ob's passt\"", data: "91% Erfolgsrate in Verkaufsgesprächen" },
   { rule: "1 CTA pro Mail", data: "371% besser als mehrere" },
+  { rule: "Chirurg-Positionierung", data: "100% der Käufer bestätigen Spezialist-Bedarf" },
+  { rule: "Betriebsvermögen-Sprache", data: "Exakte Sprache aus 266 analysierten Gesprächen" },
 ];
 
 export const stats = {

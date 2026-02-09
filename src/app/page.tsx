@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { campaigns, optimizations } from "@/data/campaigns";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -23,9 +24,14 @@ export default function Home() {
             <Separator orientation="vertical" className="h-6 hidden sm:block" />
             <p className="text-sm text-muted-foreground hidden sm:block">Cold Email Kampagnen</p>
           </div>
-          <Badge variant="outline" className="hidden sm:inline-flex">
-            3 Kampagnen &middot; 9 E-Mails
-          </Badge>
+          <div className="flex items-center gap-3">
+            <Link href="/analyse" className="text-sm text-primary hover:underline font-medium hidden sm:inline-flex">
+              Transkript-Analyse
+            </Link>
+            <Badge variant="outline" className="hidden sm:inline-flex">
+              3 Kampagnen &middot; 9 E-Mails
+            </Badge>
+          </div>
         </div>
       </header>
 
