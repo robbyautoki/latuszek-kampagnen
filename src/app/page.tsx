@@ -25,12 +25,20 @@ export default function Home() {
               Cold Email Kampagnen
             </p>
           </div>
-          <Link
-            href="/analyse"
-            className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-          >
-            Transkript-Analyse
-          </Link>
+          <nav className="flex items-center gap-6">
+            <Link
+              href="/analyse"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Analyse
+            </Link>
+            <Link
+              href="/zielgruppe"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Zielgruppe
+            </Link>
+          </nav>
         </div>
       </header>
 

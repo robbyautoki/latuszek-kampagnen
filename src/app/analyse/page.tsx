@@ -37,12 +37,20 @@ export default function AnalysePage() {
               Strategie-Analyse
             </p>
           </div>
-          <Link
-            href="/"
-            className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-          >
-            Kampagnen ansehen
-          </Link>
+          <nav className="flex items-center gap-6">
+            <Link
+              href="/"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Kampagnen
+            </Link>
+            <Link
+              href="/zielgruppe"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Zielgruppe
+            </Link>
+          </nav>
         </div>
       </header>
 
