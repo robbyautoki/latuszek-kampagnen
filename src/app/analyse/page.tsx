@@ -39,7 +39,7 @@ export default function AnalysePage() {
           </div>
           <Link
             href="/"
-            className="text-sm font-medium text-[#86868b] hover:text-white transition-colors"
+            className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
           >
             Kampagnen ansehen
           </Link>
@@ -203,7 +203,7 @@ export default function AnalysePage() {
                     </div>
                     <div className="h-px w-full bg-[#1d1d1f] mb-4">
                       <div
-                        className="h-px bg-white/40 transition-all duration-1000"
+                        className="h-px bg-accent transition-all duration-1000"
                         style={{ width: `${point.percentage}%` }}
                       />
                     </div>
@@ -243,7 +243,7 @@ export default function AnalysePage() {
                     </div>
                     <div className="h-px w-full bg-[#1d1d1f] mb-4">
                       <div
-                        className="h-px bg-white/20 transition-all duration-1000"
+                        className="h-px bg-accent/60 transition-all duration-1000"
                         style={{ width: `${blocker.percentage}%` }}
                       />
                     </div>
@@ -251,7 +251,7 @@ export default function AnalysePage() {
                       {blocker.insight}
                     </p>
                     <p className="text-sm text-[#a1a1a6] mt-4 leading-relaxed">
-                      <span className="text-white font-medium">Unsere Lösung: </span>
+                      <span className="text-accent font-medium">Unsere Lösung: </span>
                       {blocker.emailFix}
                     </p>
                   </div>
@@ -295,7 +295,7 @@ export default function AnalysePage() {
                 >
                   <AccordionTrigger className="hover:no-underline py-6">
                     <div className="flex items-center gap-4 text-left">
-                      <span className="text-[#86868b] font-mono text-sm flex-shrink-0">
+                      <span className="text-accent font-mono text-sm flex-shrink-0">
                         0{campaign.id}
                       </span>
                       <div>
@@ -325,7 +325,7 @@ export default function AnalysePage() {
                         {campaign.transcriptBasis}
                       </p>
                     </div>
-                    <div className="border-l-2 border-white/10 pl-4">
+                    <div className="border-l-2 border-accent/30 pl-4">
                       <h4 className="text-sm font-medium text-white mb-1">
                         Kern-Erkenntnis
                       </h4>
@@ -443,7 +443,7 @@ export default function AnalysePage() {
                     <p className="font-semibold text-sm text-white tracking-tight">
                       {opt.rule}
                     </p>
-                    <p className="text-xs text-[#a1a1a6] mt-1 font-medium">
+                    <p className="text-xs text-accent mt-1 font-medium">
                       {opt.study}
                     </p>
                     <p className="text-xs text-[#86868b] mt-1 leading-relaxed">
@@ -471,7 +471,7 @@ export default function AnalysePage() {
               {sequenceStrategy.timing.map((step, i) => (
                 <AnimatedSection key={i} delay={i * 80} animation="fade">
                   <div className="flex items-start gap-6 py-4">
-                    <span className="text-[#48484a] font-mono text-sm mt-0.5 flex-shrink-0">
+                    <span className="text-accent/60 font-mono text-sm mt-0.5 flex-shrink-0">
                       0{i + 1}
                     </span>
                     <div>
@@ -517,7 +517,7 @@ export default function AnalysePage() {
           </p>
           <Link
             href="/"
-            className="inline-block text-sm font-medium text-[#86868b] hover:text-white transition-colors mt-4"
+            className="inline-block text-sm font-medium text-[#86868b] hover:text-accent transition-colors mt-4"
           >
             Zu den E-Mail-Kampagnen
           </Link>

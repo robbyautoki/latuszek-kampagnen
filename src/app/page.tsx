@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           <Link
             href="/analyse"
-            className="text-sm font-medium text-[#86868b] hover:text-white transition-colors"
+            className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
           >
             Transkript-Analyse
           </Link>
@@ -92,7 +92,7 @@ export default function Home() {
                 <TabsTrigger
                   key={campaign.id}
                   value={String(campaign.id)}
-                  className="rounded-full px-6 py-2.5 text-sm font-medium text-[#86868b] transition-colors data-[state=active]:bg-white data-[state=active]:text-black data-[state=active]:shadow-none"
+                  className="rounded-full px-6 py-2.5 text-sm font-medium text-[#86868b] transition-colors data-[state=active]:bg-accent data-[state=active]:text-white data-[state=active]:shadow-none"
                 >
                   <span className="hidden sm:inline">Kampagne {campaign.id}</span>
                   <span className="sm:hidden">{campaign.id}</span>
@@ -151,7 +151,7 @@ export default function Home() {
                         className="flex items-center gap-4 flex-1 min-w-0"
                       >
                         <div className="flex flex-col items-center text-center flex-shrink-0">
-                          <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-xs font-medium text-white">
+                          <div className="w-8 h-8 rounded-full border border-accent/40 flex items-center justify-center text-xs font-medium text-white">
                             {i + 1}
                           </div>
                           <span className="text-xs text-[#86868b] mt-3">
@@ -162,7 +162,7 @@ export default function Home() {
                           </span>
                         </div>
                         {i < campaign.emails.length - 1 && (
-                          <div className="flex-1 h-px min-w-8 bg-white/10 mt-4" />
+                          <div className="flex-1 h-px min-w-8 bg-accent/15 mt-4" />
                         )}
                       </div>
                     ))}

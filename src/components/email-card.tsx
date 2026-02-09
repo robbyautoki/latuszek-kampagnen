@@ -11,7 +11,7 @@ function HighlightPlaceholders({ text }: { text: string }) {
         part.startsWith("{{") ? (
           <span
             key={i}
-            className="text-white/60 font-mono text-xs"
+            className="text-accent/70 font-mono text-xs"
           >
             {part}
           </span>
@@ -56,7 +56,7 @@ export function EmailCard({ email }: { email: Email }) {
               onClick={() => setShowVariantB(false)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 !showVariantB
-                  ? "bg-white text-black"
+                  ? "bg-accent text-white"
                   : "text-[#86868b] hover:text-white"
               }`}
             >
@@ -66,7 +66,7 @@ export function EmailCard({ email }: { email: Email }) {
               onClick={() => setShowVariantB(true)}
               className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
                 showVariantB
-                  ? "bg-white text-black"
+                  ? "bg-accent text-white"
                   : "text-[#86868b] hover:text-white"
               }`}
             >
@@ -89,7 +89,7 @@ export function EmailCard({ email }: { email: Email }) {
       {/* PS */}
       <div className="border-t border-white/[0.06] pt-5">
         <p className="text-sm leading-relaxed text-[#a1a1a6]">
-          <span className="font-semibold text-white">PS: </span>
+          <span className="font-semibold text-accent">PS: </span>
           <HighlightPlaceholders text={email.ps} />
         </p>
       </div>
