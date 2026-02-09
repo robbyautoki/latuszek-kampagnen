@@ -44,6 +44,12 @@ export default function Home() {
             >
               Nächste Steps
             </Link>
+            <Link
+              href="/liste"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Liste
+            </Link>
           </nav>
         </div>
       </header>
