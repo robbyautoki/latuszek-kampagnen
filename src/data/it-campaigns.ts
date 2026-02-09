@@ -6,7 +6,7 @@ export const itCampaigns: Campaign[] = [
     name: "Der IT-Steuervorteil",
     framework: "PAS (Problem, Agitation, Solution)",
     tone: "Kompetent, lösungsorientiert, direkt",
-    angle: "IT-GFs digitalisieren alles — außer ihre Steuerstruktur",
+    angle: "IT-GFs digitalisieren alles, außer ihre Steuerstruktur",
     emails: [
       {
         id: "A.1",
@@ -18,7 +18,7 @@ export const itCampaigns: Campaign[] = [
 
 ich sehe, dass {{Firmenname}} im Bereich {{Kerngeschaeft}} stark aufgestellt ist. Aber wie sieht es mit Ihrer Steuerstruktur aus?
 
-Die meisten IT-Geschäftsführer digitalisieren alles — außer ihre Steuergestaltung. Dabei entgehen ihnen im Schnitt €73.485 pro Jahr. Wir überführen Betriebsvermögen steuerfrei ins Privatvermögen, €500 bis €9.000 monatlich. Ihr Steuerberater bleibt dabei eingebunden.
+Die meisten IT-Geschäftsführer digitalisieren alles, außer ihre Steuergestaltung. Dabei entgehen ihnen im Schnitt €73.485 pro Jahr. Wir überführen Betriebsvermögen steuerfrei ins Privatvermögen, €500 bis €9.000 monatlich. Ihr Steuerberater bleibt dabei eingebunden.
 
 Wäre das interessant für Sie?
 
@@ -28,13 +28,13 @@ Justin Latuszek`,
 
 ich habe mir {{Firmenname}} im Bereich {{Kerngeschaeft}} angesehen und eine Frage: Wissen Sie, wie viel Geld Ihnen jährlich durch fehlende Steuergestaltung entgeht?
 
-Die meisten IT-Geschäftsführer digitalisieren alles — außer ihre Steuergestaltung. Dabei entgehen ihnen im Schnitt €73.485 pro Jahr. Wir überführen Betriebsvermögen steuerfrei ins Privatvermögen, €500 bis €9.000 monatlich. Ihr Steuerberater bleibt dabei eingebunden.
+Die meisten IT-Geschäftsführer digitalisieren alles, außer ihre Steuergestaltung. Dabei entgehen ihnen im Schnitt €73.485 pro Jahr. Wir überführen Betriebsvermögen steuerfrei ins Privatvermögen, €500 bis €9.000 monatlich. Ihr Steuerberater bleibt dabei eingebunden.
 
 Wäre das interessant für Sie?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Über 2.000 GmbH-Geschäftsführer nutzen das bereits — auch im {{Kerngeschaeft}}-Bereich. Die häufigste Reaktion: \"Warum hat mir das mein Steuerberater nie gesagt?\""
+        ps: "Über 2.000 GmbH-Geschäftsführer nutzen das bereits, auch im {{Kerngeschaeft}}-Bereich. Die häufigste Reaktion: \"Warum hat mir das mein Steuerberater nie gesagt?\""
       },
       {
         id: "A.2",
@@ -54,7 +54,7 @@ Beste Grüße
 Justin Latuszek`,
         bodyB: `Sehr geehrte{{Anrede}} {{Nachname}},
 
-ich wollte kurz nachhaken — haben Sie meine letzte Nachricht gesehen? Viele unserer IT-Mandanten wandeln monatlich €500 bis €9.000 aus ihrem Betriebsvermögen in Privatvermögen um. Steuerfrei, ohne Sozialabgaben.
+ich wollte kurz nachhaken. Haben Sie meine letzte Nachricht gesehen? Viele unserer IT-Mandanten wandeln monatlich €500 bis €9.000 aus ihrem Betriebsvermögen in Privatvermögen um. Steuerfrei, ohne Sozialabgaben.
 
 Einmal aufgesetzt, läuft die Struktur. Ohne Mehraufwand im Tagesgeschäft. Ihr Steuerberater bleibt voll eingebunden.
 
@@ -119,7 +119,7 @@ Beste Grüße
 Justin Latuszek`,
         bodyB: `Sehr geehrte{{Anrede}} {{Nachname}},
 
-ich kenne immer mehr Geschäftsführer aus dem {{Kerngeschaeft}}-Bereich, die ihre Steuerlast deutlich senken — und frage mich, ob {{Firmenname}} das auch nutzt.
+ich kenne immer mehr Geschäftsführer aus dem {{Kerngeschaeft}}-Bereich, die ihre Steuerlast deutlich senken, und frage mich, ob {{Firmenname}} das auch nutzt.
 
 Die Methode: Betriebsvermögen steuerfrei ins Privatvermögen überführen. €500 bis €9.000 monatlich. Über 2.000 GFs nutzen das bereits, mit durchschnittlich €73.485 weniger Steuern pro Jahr.
 
@@ -127,7 +127,7 @@ Wäre das auch für {{Firmenname}} interessant?
 
 Beste Grüße
 Justin Latuszek`,
-        ps: "Unsere Mandanten bewerten uns mit 4,99 von 5 Sternen bei über 364 Bewertungen. Nicht weil wir nette Leute sind — sondern weil die Zahlen stimmen."
+        ps: "Unsere Mandanten bewerten uns mit 4,99 von 5 Sternen bei über 364 Bewertungen. Nicht weil wir nette Leute sind, sondern weil die Zahlen stimmen."
       },
       {
         id: "B.2",
