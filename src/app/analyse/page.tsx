@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
@@ -23,7 +22,7 @@ export default function AnalysePage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <header className="glass sticky top-0 z-50 border-b border-border/30">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-5">
             <Image
@@ -32,41 +31,33 @@ export default function AnalysePage() {
               width={180}
               height={37}
               priority
-              className="transition-opacity hover:opacity-80"
+              className="invert"
             />
-            <div className="h-5 w-px bg-border/50 hidden sm:block" />
-            <p className="text-sm text-muted-foreground hidden sm:block font-medium tracking-wide">
+            <p className="text-sm text-[#86868b] hidden sm:block font-medium">
               Strategie-Analyse
             </p>
           </div>
           <Link
             href="/"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2 rounded-full hover:bg-secondary/80"
+            className="text-sm font-medium text-[#86868b] hover:text-white transition-colors"
           >
             Kampagnen ansehen
           </Link>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 sm:px-8 py-8 space-y-12">
+      <main className="max-w-4xl mx-auto px-6 sm:px-8">
         {/* Hero */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6 py-16 sm:py-20 relative">
-            <div className="absolute inset-0 -z-10 overflow-hidden">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-[radial-gradient(ellipse_at_center,var(--brand-lighter)_0%,transparent_70%)] opacity-[0.12] blur-3xl" />
-            </div>
-
-            <Badge
-              variant="outline"
-              className="border-brand-lighter/40 text-brand-light bg-brand-lighter/10 text-xs font-medium"
-            >
+        <AnimatedSection animation="fade">
+          <section className="pt-40 pb-20 sm:pt-48 sm:pb-24">
+            <p className="text-[#86868b] text-sm font-medium uppercase tracking-widest mb-6">
               Basierend auf {analysisStats.totalTranscripts} analysierten
               Verkaufsgesprächen
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-gradient-brand leading-[1.1]">
-              Warum diese E-Mail-Kampagnen so geschrieben wurden
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter text-white leading-[1.05]">
+              Warum diese E-Mail-Kampagnen<br />so geschrieben wurden
             </h1>
-            <p className="text-muted-foreground text-lg sm:text-xl max-w-3xl leading-relaxed">
+            <p className="text-[#86868b] text-lg sm:text-xl max-w-3xl leading-relaxed mt-6">
               Jede Formulierung, jedes CTA und jede PS-Zeile basiert auf der
               Analyse von {analysisStats.totalTranscripts} echten
               Verkaufsgesprächen mit GmbH-Geschäftsführern.{" "}
@@ -77,7 +68,7 @@ export default function AnalysePage() {
         </AnimatedSection>
 
         {/* Stats Grid */}
-        <section className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <section className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 py-16">
           {[
             {
               value: String(analysisStats.totalTranscripts),
@@ -93,12 +84,12 @@ export default function AnalysePage() {
             },
             { value: analysisStats.avgSavings, label: "Ø Ersparnis/Jahr" },
           ].map((stat, i) => (
-            <AnimatedSection key={stat.label} delay={i * 100} animation="fade-up">
-              <div className="glass-card text-center p-6 rounded-2xl border-gradient-brand hover:-translate-y-1 hover:shadow-premium-hover transition-all duration-500">
-                <div className="text-3xl font-bold text-gradient-brand">
+            <AnimatedSection key={stat.label} delay={i * 50} animation="fade">
+              <div className="text-center">
+                <div className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
                   <AnimatedCounter value={stat.value} />
                 </div>
-                <div className="text-xs text-muted-foreground mt-2 font-medium uppercase tracking-wider">
+                <div className="text-xs text-[#86868b] mt-3 font-medium uppercase tracking-widest">
                   {stat.label}
                 </div>
               </div>
@@ -106,134 +97,117 @@ export default function AnalysePage() {
           ))}
         </section>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 1: Buyer Profile */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Das Käufer-Profil
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Wer kauft? Basierend auf den{" "}
-                {analysisStats.buyerTranscripts} Abschlüssen haben wir das
-                Profil des idealen Kunden rekonstruiert.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Das Käufer-Profil
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed">
+              Wer kauft? Basierend auf den{" "}
+              {analysisStats.buyerTranscripts} Abschlüssen haben wir das
+              Profil des idealen Kunden rekonstruiert.
+            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <AnimatedSection delay={100} animation="fade-up">
-                <div className="glass-card rounded-2xl p-6 h-full">
-                  <h3 className="font-semibold mb-4 tracking-tight">Typischer Käufer</h3>
-                  <ul className="space-y-0">
-                    {[
-                      { label: "Alter", value: analysisStats.buyerAgeRange },
-                      { label: "GmbHs", value: analysisStats.avgCompaniesPerBuyer },
-                      { label: "Umsatz", value: "€500K - €5M+" },
-                      { label: "Position", value: "GF & Gesellschafter" },
-                    ].map((item, idx) => (
-                      <li key={item.label} className={`flex justify-between py-3 text-sm ${idx < 3 ? "border-b border-border/30" : ""}`}>
-                        <span className="text-muted-foreground">{item.label}</span>
-                        <span className="font-medium">{item.value}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </AnimatedSection>
-
-              <AnimatedSection delay={200} animation="fade-up">
-                <div className="glass-card rounded-2xl p-6 h-full">
-                  <h3 className="font-semibold mb-4 tracking-tight">Branchen-Verteilung</h3>
-                  <ul className="space-y-0">
-                    {buyerProfile.industries.map((ind, idx) => (
-                      <li key={ind.name} className={`flex justify-between py-3 text-sm ${idx < buyerProfile.industries.length - 1 ? "border-b border-border/30" : ""}`}>
-                        <span className="text-muted-foreground">{ind.name}</span>
-                        <span className="font-medium">{ind.share}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </AnimatedSection>
-            </div>
-
-            <AnimatedSection delay={300} animation="fade-up">
-              <div className="glass-card rounded-2xl p-6">
-                <h3 className="font-semibold mb-4 tracking-tight">Psychografie der Käufer</h3>
-                <ul className="space-y-3">
-                  {buyerProfile.psychographics.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm">
-                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand/10 text-brand-light flex items-center justify-center text-xs font-bold mt-0.5">
-                        {i + 1}
-                      </span>
-                      <span className="leading-relaxed">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={400} animation="fade-up">
-              <div className="glass-card rounded-2xl p-6">
-                <h3 className="font-semibold mb-4 tracking-tight">
-                  Was den Kauf auslöst (Trigger)
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12">
+              <div>
+                <h3 className="text-sm font-medium text-[#86868b] uppercase tracking-widest mb-6">
+                  Typischer Käufer
                 </h3>
-                <ul className="space-y-3">
-                  {buyerProfile.decisionTriggers.map((trigger, i) => (
-                    <li key={i} className="flex items-start gap-3 text-sm">
-                      <span className="text-brand-light font-bold mt-0.5 flex-shrink-0">
-                        &#10003;
-                      </span>
-                      <span className="leading-relaxed">{trigger}</span>
+                <ul className="space-y-0">
+                  {[
+                    { label: "Alter", value: analysisStats.buyerAgeRange },
+                    { label: "GmbHs", value: analysisStats.avgCompaniesPerBuyer },
+                    { label: "Umsatz", value: "€500K - €5M+" },
+                    { label: "Position", value: "GF & Gesellschafter" },
+                  ].map((item, idx) => (
+                    <li key={item.label} className={`flex justify-between py-4 text-sm ${idx < 3 ? "border-b border-white/[0.06]" : ""}`}>
+                      <span className="text-[#86868b]">{item.label}</span>
+                      <span className="font-medium text-white">{item.value}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </AnimatedSection>
+
+              <div>
+                <h3 className="text-sm font-medium text-[#86868b] uppercase tracking-widest mb-6">
+                  Branchen-Verteilung
+                </h3>
+                <ul className="space-y-0">
+                  {buyerProfile.industries.map((ind, idx) => (
+                    <li key={ind.name} className={`flex justify-between py-4 text-sm ${idx < buyerProfile.industries.length - 1 ? "border-b border-white/[0.06]" : ""}`}>
+                      <span className="text-[#86868b]">{ind.name}</span>
+                      <span className="font-medium text-white">{ind.share}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-sm font-medium text-[#86868b] uppercase tracking-widest mb-6">
+                Psychografie der Käufer
+              </h3>
+              <ul className="space-y-4">
+                {buyerProfile.psychographics.map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 text-sm">
+                    <span className="text-[#48484a] font-mono text-xs mt-0.5 flex-shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-[#a1a1a6] leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-sm font-medium text-[#86868b] uppercase tracking-widest mb-6">
+                Was den Kauf auslöst
+              </h3>
+              <ul className="space-y-4">
+                {buyerProfile.decisionTriggers.map((trigger, i) => (
+                  <li key={i} className="flex items-start gap-4 text-sm">
+                    <span className="text-[#48484a] font-mono text-xs mt-0.5 flex-shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-[#a1a1a6] leading-relaxed">{trigger}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 2: Pain Points */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Die 6 größten Schmerzpunkte
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Identifiziert aus {analysisStats.buyerTranscripts}{" "}
-                Käufer-Gesprächen. Sortiert nach Häufigkeit.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Die 6 größten Schmerzpunkte
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Identifiziert aus {analysisStats.buyerTranscripts}{" "}
+              Käufer-Gesprächen. Sortiert nach Häufigkeit.
+            </p>
 
-            <div className="space-y-4">
+            <div className="space-y-0">
               {painPoints.map((point, i) => (
-                <AnimatedSection key={point.label} delay={i * 100} animation="fade-up">
-                  <div className="glass-card rounded-2xl p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <div className="flex items-center gap-3">
-                        <span className="text-2xl font-bold text-gradient-brand">
-                          #{i + 1}
-                        </span>
-                        <h3 className="font-semibold tracking-tight text-lg">
-                          {point.label}
-                        </h3>
-                      </div>
-                      <Badge className="bg-brand/10 text-brand-light border-brand/20 font-bold">
+                <AnimatedSection key={point.label} delay={i * 50} animation="fade">
+                  <div className="py-8 border-b border-white/[0.06] last:border-b-0">
+                    <div className="flex items-baseline justify-between mb-2">
+                      <h3 className="text-lg font-semibold text-white tracking-tight">
+                        {point.label}
+                      </h3>
+                      <span className="text-sm text-[#86868b] font-mono tabular-nums">
                         {point.percentage}%
-                      </Badge>
+                      </span>
                     </div>
-                    <div className="h-2.5 w-full rounded-full bg-secondary/80 overflow-hidden mb-3">
+                    <div className="h-px w-full bg-[#1d1d1f] mb-4">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-primary via-brand-light to-brand-lighter transition-all duration-1000 ease-out"
+                        className="h-px bg-white/40 transition-all duration-1000"
                         style={{ width: `${point.percentage}%` }}
                       />
                     </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-[#86868b] leading-relaxed">
                       {point.description}
                     </p>
                   </div>
@@ -243,138 +217,121 @@ export default function AnalysePage() {
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 3: Non-Buyer Blockers */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Was Nicht-Käufer blockiert
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Aus {analysisStats.nonBuyerTranscripts} Gesprächen ohne
-                Abschluss. Jeder Blocker wird in den Kampagnen gezielt
-                adressiert.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Was Nicht-Käufer blockiert
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Aus {analysisStats.nonBuyerTranscripts} Gesprächen ohne
+              Abschluss. Jeder Blocker wird in den Kampagnen gezielt
+              adressiert.
+            </p>
 
-            <div className="space-y-4">
+            <div className="space-y-0">
               {nonBuyerBlockers.map((blocker, i) => (
-                <AnimatedSection key={blocker.label} delay={i * 100} animation="fade-up">
-                  <div className="glass-card rounded-2xl overflow-hidden">
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="font-semibold tracking-tight text-lg">
-                          {blocker.label}
-                        </h3>
-                        <Badge className="bg-destructive/10 text-destructive border-destructive/20 font-bold">
-                          {blocker.percentage}%
-                        </Badge>
-                      </div>
-                      <div className="h-2.5 w-full rounded-full bg-secondary/80 overflow-hidden mb-3">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-destructive/80 to-destructive/50 transition-all duration-1000 ease-out"
-                          style={{ width: `${blocker.percentage}%` }}
-                        />
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {blocker.insight}
-                      </p>
+                <AnimatedSection key={blocker.label} delay={i * 50} animation="fade">
+                  <div className="py-8 border-b border-white/[0.06] last:border-b-0">
+                    <div className="flex items-baseline justify-between mb-2">
+                      <h3 className="text-lg font-semibold text-white tracking-tight">
+                        {blocker.label}
+                      </h3>
+                      <span className="text-sm text-[#86868b] font-mono tabular-nums">
+                        {blocker.percentage}%
+                      </span>
                     </div>
-                    <div className="bg-brand/5 border-t border-brand/10 px-6 py-4">
-                      <p className="text-sm leading-relaxed">
-                        <span className="font-semibold text-brand-light">
-                          Unsere Lösung:{" "}
-                        </span>
-                        {blocker.emailFix}
-                      </p>
+                    <div className="h-px w-full bg-[#1d1d1f] mb-4">
+                      <div
+                        className="h-px bg-white/20 transition-all duration-1000"
+                        style={{ width: `${blocker.percentage}%` }}
+                      />
                     </div>
+                    <p className="text-sm text-[#86868b] leading-relaxed">
+                      {blocker.insight}
+                    </p>
+                    <p className="text-sm text-[#a1a1a6] mt-4 leading-relaxed">
+                      <span className="text-white font-medium">Unsere Lösung: </span>
+                      {blocker.emailFix}
+                    </p>
                   </div>
                 </AnimatedSection>
               ))}
             </div>
 
-            <AnimatedSection delay={400} animation="fade-up">
-              <div className="relative rounded-2xl border border-gold/30 bg-gradient-to-br from-gold-light/60 via-gold-light/30 to-transparent p-6 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
-                <h3 className="font-bold text-gold-dark mb-2 text-lg relative">
-                  Zentrales Ergebnis
-                </h3>
-                <p className="text-sm text-foreground/80 leading-relaxed relative">
-                  Der Deal stirbt zwischen Gespräch 1 und Gespräch 2. 85% der
-                  Nicht-Käufer buchen einen Folgetermin, kommen aber nicht. Grund:
-                  Sie fragen ihren Steuerberater, der abblockt. Darum nutzen
-                  unsere Mails bewusst einen Interest-CTA (&ldquo;Wäre das
-                  interessant?&rdquo;) statt eines Meeting-CTAs (&ldquo;Haben Sie
-                  Zeit für ein Gespräch?&rdquo;).
-                </p>
-              </div>
-            </AnimatedSection>
+            <div className="py-12 mt-8">
+              <h3 className="text-xl font-bold text-white mb-3">
+                Zentrales Ergebnis
+              </h3>
+              <p className="text-[#a1a1a6] leading-relaxed">
+                Der Deal stirbt zwischen Gespräch 1 und Gespräch 2. 85% der
+                Nicht-Käufer buchen einen Folgetermin, kommen aber nicht. Grund:
+                Sie fragen ihren Steuerberater, der abblockt. Darum nutzen
+                unsere Mails bewusst einen Interest-CTA (&ldquo;Wäre das
+                interessant?&rdquo;) statt eines Meeting-CTAs (&ldquo;Haben Sie
+                Zeit für ein Gespräch?&rdquo;).
+              </p>
+            </div>
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 4: Campaign Rationales */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Warum diese E-Mail-Strategie funktioniert
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Jede der 3 Kampagnen wurde für ein spezifisches Muster aus den
-                Transkripten entwickelt.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Warum diese E-Mail-Strategie funktioniert
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Jede der 3 Kampagnen wurde für ein spezifisches Muster aus den
+              Transkripten entwickelt.
+            </p>
 
-            <Accordion type="multiple" className="space-y-3">
+            <Accordion type="multiple" className="space-y-0 divide-y divide-white/[0.06]">
               {campaignRationales.map((campaign) => (
                 <AccordionItem
                   key={campaign.id}
                   value={String(campaign.id)}
-                  className="glass-card rounded-2xl px-6 border-0"
+                  className="border-0 py-2"
                 >
-                  <AccordionTrigger className="hover:no-underline py-5">
+                  <AccordionTrigger className="hover:no-underline py-6">
                     <div className="flex items-center gap-4 text-left">
-                      <span className="flex-shrink-0 w-9 h-9 rounded-full bg-gradient-to-br from-primary to-brand-light text-primary-foreground flex items-center justify-center text-sm font-bold">
-                        {campaign.id}
+                      <span className="text-[#86868b] font-mono text-sm flex-shrink-0">
+                        0{campaign.id}
                       </span>
                       <div>
-                        <p className="font-semibold tracking-tight">
+                        <p className="font-semibold text-white tracking-tight">
                           Kampagne {campaign.id}: &ldquo;{campaign.name}&rdquo;
                         </p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
+                        <p className="text-xs text-[#86868b] mt-0.5">
                           {campaign.framework}
                         </p>
                       </div>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="pb-6 space-y-4">
+                  <AccordionContent className="pb-8 space-y-5 pl-12">
                     <div>
-                      <h4 className="text-sm font-semibold text-brand-light mb-1">
+                      <h4 className="text-sm font-medium text-[#a1a1a6] mb-1">
                         Warum dieses Framework?
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-[#86868b] leading-relaxed">
                         {campaign.why}
                       </p>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-brand-light mb-1">
+                      <h4 className="text-sm font-medium text-[#a1a1a6] mb-1">
                         Transkript-Basis
                       </h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-sm text-[#86868b] leading-relaxed">
                         {campaign.transcriptBasis}
                       </p>
                     </div>
-                    <div className="bg-brand/5 rounded-xl p-4 border border-brand/10">
-                      <h4 className="text-sm font-semibold mb-1">
+                    <div className="border-l-2 border-white/10 pl-4">
+                      <h4 className="text-sm font-medium text-white mb-1">
                         Kern-Erkenntnis
                       </h4>
-                      <p className="text-sm leading-relaxed">{campaign.keyInsight}</p>
+                      <p className="text-sm text-[#a1a1a6] leading-relaxed">
+                        {campaign.keyInsight}
+                      </p>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -383,70 +340,34 @@ export default function AnalysePage() {
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 5: Winning Language */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Die Verkaufs-Sprache
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Exakte Formulierungen aus den Transkripten, die in den
-                E-Mail-Kampagnen eingesetzt werden.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Die Verkaufs-Sprache
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Exakte Formulierungen aus den Transkripten, die in den
+              E-Mail-Kampagnen eingesetzt werden.
+            </p>
 
-            <div className="space-y-4">
+            <div className="space-y-0">
               {winningPhrases.map((phrase, i) => (
-                <AnimatedSection key={i} delay={i * 100} animation="fade-up">
-                  <div
-                    className={`glass-card rounded-2xl p-6 relative overflow-hidden transition-all duration-500 hover:shadow-premium border-l-4 ${
-                      phrase.type === "buyer"
-                        ? "border-l-primary"
+                <AnimatedSection key={i} delay={i * 50} animation="fade">
+                  <div className="py-8 border-b border-white/[0.06] last:border-b-0">
+                    <p className="text-xl sm:text-2xl font-medium text-white italic leading-relaxed">
+                      &ldquo;{phrase.text}&rdquo;
+                    </p>
+                    <p className="text-xs text-[#86868b] mt-4 leading-relaxed">
+                      {phrase.context}
+                    </p>
+                    <span className="text-xs text-[#48484a] font-medium uppercase tracking-widest mt-2 inline-block">
+                      {phrase.type === "buyer"
+                        ? "Käufer-Zitat"
                         : phrase.type === "seller"
-                        ? "border-l-brand-light"
-                        : "border-l-gold"
-                    }`}
-                  >
-                    <span className="absolute -top-2 -left-1 text-8xl font-serif text-primary/5 select-none pointer-events-none leading-none">
-                      &ldquo;
+                        ? "Verkaufs-Sprache"
+                        : "Erkenntnis"}
                     </span>
-
-                    <div className="relative z-10">
-                      <p className="font-medium text-[0.9375rem] italic leading-relaxed pl-1">
-                        {phrase.text}
-                      </p>
-                      <p
-                        className={`text-xs mt-3 leading-relaxed ${
-                          phrase.type === "buyer"
-                            ? "text-primary"
-                            : phrase.type === "seller"
-                            ? "text-brand-light"
-                            : "text-gold-dark"
-                        }`}
-                      >
-                        {phrase.context}
-                      </p>
-                      <Badge
-                        variant="outline"
-                        className={`mt-3 text-xs ${
-                          phrase.type === "buyer"
-                            ? "border-primary/30 text-primary bg-primary/5"
-                            : phrase.type === "seller"
-                            ? "border-brand-light/30 text-brand-light bg-brand-light/5"
-                            : "border-gold/30 text-gold-dark bg-gold-light/30"
-                        }`}
-                      >
-                        {phrase.type === "buyer"
-                          ? "Käufer-Zitat"
-                          : phrase.type === "seller"
-                          ? "Verkaufs-Sprache"
-                          : "Erkenntnis"}
-                      </Badge>
-                    </div>
                   </div>
                 </AnimatedSection>
               ))}
@@ -454,24 +375,19 @@ export default function AnalysePage() {
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 6: Optimizations */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Datenbasierte Optimierungen
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Jede Regel ist doppelt validiert: durch externe Studien UND
-                durch die Muster in den {analysisStats.totalTranscripts}{" "}
-                Transkripten.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Datenbasierte Optimierungen
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Jede Regel ist doppelt validiert: durch externe Studien UND
+              durch die Muster in den {analysisStats.totalTranscripts}{" "}
+              Transkripten.
+            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-6">
               {[
                 {
                   rule: 'Mit "Ich" starten',
@@ -522,15 +438,15 @@ export default function AnalysePage() {
                     "Käufer entscheiden sich schneller bei einer klaren Frage statt mehrerer Optionen.",
                 },
               ].map((opt, i) => (
-                <AnimatedSection key={i} delay={i * 75} animation="fade-up">
-                  <div className="stripe-brand pl-5 p-4 rounded-xl glass-card hover:-translate-y-0.5 hover:shadow-premium-hover transition-all duration-500 h-full">
-                    <p className="font-semibold text-sm tracking-tight">
+                <AnimatedSection key={i} delay={i * 40} animation="fade">
+                  <div className="py-2">
+                    <p className="font-semibold text-sm text-white tracking-tight">
                       {opt.rule}
                     </p>
-                    <p className="text-xs text-brand-light mt-1 font-medium">
+                    <p className="text-xs text-[#a1a1a6] mt-1 font-medium">
                       {opt.study}
                     </p>
-                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    <p className="text-xs text-[#86868b] mt-1 leading-relaxed">
                       {opt.transcript}
                     </p>
                   </div>
@@ -540,43 +456,29 @@ export default function AnalysePage() {
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Section 7: Sequence Strategy */}
-        <AnimatedSection animation="fade-up">
-          <section className="space-y-6">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight">
-                Empfohlene Sequenz-Strategie
-              </h2>
-              <p className="text-muted-foreground mt-2 leading-relaxed">
-                Timing und Entscheidungen basierend auf den
-                Conversion-Mustern.
-              </p>
-            </div>
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">
+              Empfohlene Sequenz-Strategie
+            </h2>
+            <p className="text-[#86868b] mt-2 leading-relaxed mb-12">
+              Timing und Entscheidungen basierend auf den
+              Conversion-Mustern.
+            </p>
 
-            {/* Timeline */}
-            <div className="relative space-y-0">
-              <div className="absolute left-5 top-5 bottom-5 w-0.5 bg-gradient-to-b from-primary via-brand-light to-destructive/60 rounded-full" />
-
+            <div className="space-y-6">
               {sequenceStrategy.timing.map((step, i) => (
-                <AnimatedSection key={i} delay={i * 150} animation="fade-up">
-                  <div className="flex items-start gap-6 relative py-3">
-                    <div
-                      className={`relative z-10 flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold ring-4 ring-background ${
-                        i === 0
-                          ? "bg-primary text-primary-foreground"
-                          : i === 2
-                          ? "bg-destructive text-white"
-                          : "bg-brand-light text-white"
-                      }`}
-                    >
-                      {i + 1}
-                    </div>
-                    <div className="glass-card rounded-xl p-5 flex-1">
-                      <p className="font-semibold tracking-tight">{step.label}</p>
-                      <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
+                <AnimatedSection key={i} delay={i * 80} animation="fade">
+                  <div className="flex items-start gap-6 py-4">
+                    <span className="text-[#48484a] font-mono text-sm mt-0.5 flex-shrink-0">
+                      0{i + 1}
+                    </span>
+                    <div>
+                      <p className="font-semibold text-white tracking-tight">
+                        {step.label}
+                      </p>
+                      <p className="text-sm text-[#86868b] mt-2 leading-relaxed">
                         {step.rationale}
                       </p>
                     </div>
@@ -585,18 +487,17 @@ export default function AnalysePage() {
               ))}
             </div>
 
-            {/* Key Decisions */}
-            <div className="space-y-3 pt-4">
-              <h3 className="font-semibold text-lg tracking-tight">
+            <div className="space-y-0 divide-y divide-white/[0.06] mt-12">
+              <h3 className="text-lg font-semibold text-white tracking-tight pb-6">
                 Strategische Entscheidungen
               </h3>
               {sequenceStrategy.keyDecisions.map((item, i) => (
-                <AnimatedSection key={i} delay={i * 100} animation="fade-up">
-                  <div className="glass-card rounded-xl p-5">
-                    <h4 className="font-semibold text-sm text-brand-light">
+                <AnimatedSection key={i} delay={i * 50} animation="fade">
+                  <div className="py-6">
+                    <h4 className="font-medium text-sm text-white">
                       {item.decision}
                     </h4>
-                    <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
+                    <p className="text-sm text-[#86868b] mt-2 leading-relaxed">
                       {item.reason}
                     </p>
                   </div>
@@ -606,12 +507,9 @@ export default function AnalysePage() {
           </section>
         </AnimatedSection>
 
-        {/* Divider */}
-        <div className="w-24 h-px mx-auto bg-gradient-to-r from-transparent via-border to-transparent my-16" />
-
         {/* Footer */}
-        <section className="text-center py-16 space-y-4">
-          <p className="text-sm text-muted-foreground leading-relaxed">
+        <section className="text-center py-24">
+          <p className="text-sm text-[#86868b] leading-relaxed">
             Analyse basierend auf {analysisStats.totalTranscripts}{" "}
             Verkaufsgesprächen &middot;{" "}
             {analysisStats.buyerTranscripts} Käufer &middot;{" "}
@@ -619,11 +517,11 @@ export default function AnalysePage() {
           </p>
           <Link
             href="/"
-            className="inline-block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-4 py-2 rounded-full hover:bg-secondary/80"
+            className="inline-block text-sm font-medium text-[#86868b] hover:text-white transition-colors mt-4"
           >
             Zu den E-Mail-Kampagnen
           </Link>
-          <p className="text-xs text-muted-foreground pt-2">
+          <p className="text-xs text-[#48484a] pt-6">
             Erstellt für Latuszek Finanzberatung GmbH
           </p>
         </section>

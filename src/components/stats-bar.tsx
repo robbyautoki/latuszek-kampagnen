@@ -14,18 +14,14 @@ const statItems = [
 
 export function StatsBar() {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-12">
       {statItems.map((stat, i) => (
-        <AnimatedSection key={stat.label} delay={i * 100} animation="fade-up">
-          <div
-            className="glass-card text-center p-6 rounded-2xl border-gradient-brand
-                        hover:-translate-y-1 hover:shadow-premium-hover
-                        transition-all duration-500 ease-out"
-          >
-            <div className="text-3xl font-bold text-gradient-brand tracking-tight">
-              <AnimatedCounter value={stat.value} duration={2000} />
+        <AnimatedSection key={stat.label} delay={i * 50} animation="fade">
+          <div className="text-center">
+            <div className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
+              <AnimatedCounter value={stat.value} />
             </div>
-            <div className="text-xs text-muted-foreground mt-2 font-medium uppercase tracking-wider">
+            <div className="text-xs text-[#86868b] mt-3 font-medium uppercase tracking-widest">
               {stat.label}
             </div>
           </div>

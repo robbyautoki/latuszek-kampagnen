@@ -41,25 +41,18 @@ export function AnimatedSection({
     return () => observer.disconnect();
   }, [threshold, once]);
 
-  const animationClasses: Record<string, string> = {
-    "fade-up": "animate-in fade-in slide-in-from-bottom-4",
-    fade: "animate-in fade-in",
-    "slide-left": "animate-in fade-in slide-in-from-left-8",
-    "slide-right": "animate-in fade-in slide-in-from-right-8",
-    zoom: "animate-in fade-in zoom-in-95",
-  };
-
   return (
     <div
       ref={ref}
       className={cn(
         "opacity-0",
-        isVisible &&
-          `opacity-100 ${animationClasses[animation]} duration-700 fill-mode-forwards`,
+        isVisible && "opacity-100 animate-in fade-in duration-1000 fill-mode-forwards",
         className
       )}
       style={
-        isVisible && delay > 0 ? { animationDelay: `${delay}ms` } : undefined
+        isVisible && delay > 0
+          ? { animationDelay: `${Math.min(delay, 200)}ms` }
+          : undefined
       }
     >
       {children}
