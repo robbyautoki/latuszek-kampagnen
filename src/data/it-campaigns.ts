@@ -206,11 +206,11 @@ Justin Latuszek`,
 
 Hat Ihr Steuerberater Sie dieses Jahr proaktiv angerufen, um Ihnen zu zeigen, wie Sie Betriebsvermögen steuerfrei in Privatvermögen verschieben?
 
-Falls ja – top, Mail löschen. Falls nein – dann geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Und das kostet im Schnitt 70k pro Jahr.
+Falls ja, top, Mail löschen. Falls nein, dann geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Und das kostet im Schnitt 70k pro Jahr.
 
 Ich sage Ihnen in 10 Minuten, was bei Ihnen möglich ist. Kostenlos, kein Haken.
 
-Kurzes "Ja" reicht. Kurzes "Nein" auch – ist Ihr Geld, nicht meins.
+Kurzes "Ja" reicht. Kurzes "Nein" auch, ist Ihr Geld, nicht meins.
 
 Justin`,
         ps: ""
@@ -225,11 +225,11 @@ Justin`,
 
 Wissen Sie, wie viel Geld jeden Monat in Ihrer GmbH liegen bleibt, das steuerfrei bei Ihnen privat landen könnte?
 
-Falls Sie die Zahl kennen – Hut ab, Mail löschen. Falls nicht – dann ist das genau die Lücke, die GmbH-Geschäftsführer im Schnitt 70k pro Jahr kostet.
+Falls Sie die Zahl kennen, Hut ab, Mail löschen. Falls nicht, dann ist das genau die Lücke, die GmbH-Geschäftsführer im Schnitt 70k pro Jahr kostet.
 
 10 Minuten, kostenlos, und Sie haben die Zahl.
 
-Wollen Sie's wissen – oder lieber nicht?
+Wollen Sie's wissen oder lieber nicht?
 
 Justin`,
         ps: ""
@@ -246,7 +246,7 @@ Verschiebt Ihr Steuerberater aktiv Betriebsvermögen in Ihr Privatvermögen?
 
 Wissen Sie, wie viel das pro Jahr wäre?
 
-Wenn Sie beides mit Ja beantworten – alles gut, löschen Sie die Mail. Wenn nicht – dann lassen Sie gerade fünfstellig pro Jahr liegen. Wie über 2.000 Geschäftsführer vor Ihnen.
+Wenn Sie beides mit Ja beantworten, alles gut, löschen Sie die Mail. Wenn nicht, dann lassen Sie gerade fünfstellig pro Jahr liegen. Wie über 2.000 Geschäftsführer vor Ihnen.
 
 Ich prüfe das in 10 Minuten. Kostenlos. Kein Gespräch, kein Vertrag.
 
@@ -269,7 +269,7 @@ Die meisten wussten vorher nicht, dass das geht. Danach fragen alle dasselbe: "W
 
 Ich kann Ihnen in 10 Minuten sagen, ob das für {{Firmenname}} im {{Kerngeschaeft}}-Bereich funktioniert. Kostenlos, unverbindlich.
 
-Ein "Ja" reicht. Ein "Nein" auch – dann wissen Sie wenigstens, dass Sie die Mail gesehen haben.
+Ein "Ja" reicht. Ein "Nein" auch, dann wissen Sie wenigstens, dass Sie die Mail gesehen haben.
 
 Justin`,
         ps: ""
@@ -282,7 +282,7 @@ Justin`,
         subjectB: "{{Vorname}}, eine wette",
         body: `{{Vorname}}, ich wette, Ihr Steuerberater macht gute Buchhaltung. Aber ich wette auch, dass er Sie noch nie proaktiv gefragt hat, wie Sie Betriebsvermögen steuerfrei in Privatvermögen verschieben können.
 
-Das ist kein Vorwurf an ihn – das ist einfach nicht sein Job. Allgemeinmediziner vs. Chirurg.
+Das ist kein Vorwurf an ihn, das ist einfach nicht sein Job. Allgemeinmediziner vs. Chirurg.
 
 Diese Lücke kostet GmbH-Geschäftsführer zwischen €30.000 und €100.000 pro Jahr. Jedes Jahr, in dem nichts passiert.
 

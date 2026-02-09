@@ -26,10 +26,10 @@ export default function ListePage() {
           </div>
           <nav className="flex items-center gap-6">
             <Link
-              href="/"
+              href="/zielgruppe"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Kampagnen
+              Zielgruppe
             </Link>
             <Link
               href="/analyse"
@@ -38,16 +38,10 @@ export default function ListePage() {
               Analyse
             </Link>
             <Link
-              href="/zielgruppe"
+              href="/liste"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Zielgruppe
-            </Link>
-            <Link
-              href="/naechste-steps"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              N\u00E4chste Steps
+              Liste
             </Link>
           </nav>
         </div>
@@ -77,10 +71,10 @@ export default function ListePage() {
         <section className="text-center py-16 border-t border-white/[0.06]">
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/"
+              href="/zielgruppe"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Kampagnen ansehen
+              Zielgruppe ansehen
             </Link>
             <span className="text-[#48484a]">&middot;</span>
             <Link
@@ -88,13 +82,6 @@ export default function ListePage() {
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
               Analyse ansehen
-            </Link>
-            <span className="text-[#48484a]">&middot;</span>
-            <Link
-              href="/naechste-steps"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              N\u00E4chste Steps
             </Link>
           </div>
           <p className="text-xs text-[#48484a] pt-4">

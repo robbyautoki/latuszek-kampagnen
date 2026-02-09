@@ -23,22 +23,16 @@ export default function NaechsteStepsPage() {
           </div>
           <nav className="flex items-center gap-6">
             <Link
-              href="/"
+              href="/zielgruppe"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Kampagnen
+              Zielgruppe
             </Link>
             <Link
               href="/analyse"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
               Analyse
-            </Link>
-            <Link
-              href="/zielgruppe"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              Zielgruppe
             </Link>
             <Link
               href="/liste"

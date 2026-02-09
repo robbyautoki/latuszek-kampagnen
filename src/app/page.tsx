@@ -27,22 +27,16 @@ export default function Home() {
           </div>
           <nav className="flex items-center gap-6">
             <Link
-              href="/analyse"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              Analyse
-            </Link>
-            <Link
               href="/zielgruppe"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
               Zielgruppe
             </Link>
             <Link
-              href="/naechste-steps"
+              href="/analyse"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Nächste Steps
+              Analyse
             </Link>
             <Link
               href="/liste"
