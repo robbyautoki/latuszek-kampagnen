@@ -199,7 +199,7 @@ Justin Latuszek`,
         title: "Erstansprache",
         timing: "Tag 0",
         subjectA: "{{Vorname}}, kurzer Test",
-        subjectB: "{{Vorname}}, kurzer test",
+        subjectB: "macht ihr steuerberater das, {{Vorname}}?",
         body: `{{Vorname}}, eine Frage:
 
 Hat Ihr Steuerberater Sie dieses Jahr proaktiv angerufen, um Ihnen zu zeigen, wie Sie Betriebsvermögen steuerfrei in Privatvermögen verschieben?
@@ -218,7 +218,7 @@ Justin`,
         title: "Follow-up 1",
         timing: "Tag +2",
         subjectA: "{{Vorname}}, blinder Fleck?",
-        subjectB: "{{Vorname}}, blinder fleck?",
+        subjectB: "kennen sie die zahl, {{Vorname}}?",
         body: `{{Vorname}}, eine ehrliche Frage:
 
 Wissen Sie, wie viel Geld jeden Monat in Ihrer GmbH liegen bleibt, das steuerfrei bei Ihnen privat landen könnte?
@@ -237,7 +237,7 @@ Justin`,
         title: "Follow-up 2",
         timing: "Tag +4",
         subjectA: "{{Vorname}}, zwei Fragen",
-        subjectB: "{{Vorname}}, zwei fragen",
+        subjectB: "{{Vorname}}, ja oder nein?",
         body: `{{Vorname}}, beantworten Sie zwei Fragen:
 
 Verschiebt Ihr Steuerberater aktiv Betriebsvermögen in Ihr Privatvermögen?
