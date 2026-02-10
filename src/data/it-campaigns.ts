@@ -204,7 +204,7 @@ Justin Latuszek`,
 
 Hat Ihr Steuerberater Sie dieses Jahr proaktiv angerufen, um Ihnen zu zeigen, wie Sie Betriebsvermögen steuerfrei in Privatvermögen verschieben?
 
-Falls ja, top, Mail löschen. Falls nein, dann geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern. Und das kostet im Schnitt 70k pro Jahr.
+Falls ja, top, Mail löschen. Falls nein, dann geht es Ihnen wie 9 von 10 GmbH-Geschäftsführern im {{Kerngeschaeft}}-Bereich. Und das kostet im Schnitt 70k pro Jahr.
 
 Ich sage Ihnen in 10 Minuten, was bei Ihnen möglich ist. Ohne Kosten, ohne Bedingungen.
 
