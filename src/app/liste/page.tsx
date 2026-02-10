@@ -58,7 +58,7 @@ export default function ListePage() {
               Lead-Liste
             </h1>
             <p className="text-[#86868b] text-lg max-w-2xl leading-relaxed mt-4">
-              3.130 bereinigte Kontakte mit 2 Kampagnen-Varianten.
+              2.777 bereinigte Kontakte mit 3 Kampagnen-Varianten.
               GmbH-Geschäftsführer im IT-Segment, Deutschland.
             </p>
           </section>
