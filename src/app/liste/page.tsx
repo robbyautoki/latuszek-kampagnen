@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import { itCampaigns } from "@/data/it-campaigns";
+import itLeads from "@/data/leads.json";
 import { LeadTable } from "./lead-table";
 
 export default function ListePage() {
@@ -43,6 +44,12 @@ export default function ListePage() {
             >
               Liste
             </Link>
+            <Link
+              href="/bau-immo"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Bau/Immo
+            </Link>
           </nav>
         </div>
       </header>
@@ -65,7 +72,7 @@ export default function ListePage() {
         </AnimatedSection>
 
         {/* Password-protected content */}
-        <LeadTable campaigns={itCampaigns} />
+        <LeadTable campaigns={itCampaigns} leads={itLeads} />
 
         {/* Footer */}
         <section className="text-center py-16 border-t border-white/[0.06]">

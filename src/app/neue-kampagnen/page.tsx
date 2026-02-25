@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { campaigns, optimizations } from "@/data/campaigns";
+import { neueCampaigns } from "@/data/neue-kampagnen";
+import { optimizations } from "@/data/campaigns";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { EmailCard } from "@/components/email-card";
 import { StatsBar } from "@/components/stats-bar";
 import { AnimatedSection } from "@/components/animated-section";
 
-export default function Home() {
+export default function NeueKampagnenPage() {
   return (
     <div className="min-h-screen">
       {/* Header */}
@@ -22,15 +23,27 @@ export default function Home() {
               className="invert"
             />
             <p className="text-sm text-[#86868b] hidden sm:block font-medium">
-              Cold Email Kampagnen
+              Neue Kampagnen
             </p>
           </div>
           <nav className="flex items-center gap-6">
             <Link
-              href="/zielgruppe"
+              href="/"
               className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
             >
-              Zielgruppe
+              Kampagnen
+            </Link>
+            <Link
+              href="/bau-immo"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Bau/Immo
+            </Link>
+            <Link
+              href="/neue-kampagnen"
+              className="text-sm font-medium text-accent transition-colors"
+            >
+              Neue Kampagnen
             </Link>
             <Link
               href="/analyse"
@@ -44,18 +57,6 @@ export default function Home() {
             >
               Liste
             </Link>
-            <Link
-              href="/bau-immo"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              Bau/Immo
-            </Link>
-            <Link
-              href="/neue-kampagnen"
-              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
-            >
-              Neue Kampagnen
-            </Link>
           </nav>
         </div>
       </header>
@@ -65,16 +66,16 @@ export default function Home() {
         <AnimatedSection animation="fade">
           <section className="text-center pt-40 pb-24 sm:pt-48 sm:pb-32">
             <p className="text-[#86868b] text-sm font-medium uppercase tracking-widest mb-6">
-              266 Gespräche analysiert
+              Basierend auf dem konversionsstärksten Creative
             </p>
 
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[1.05]">
-              Cold Email<br />Kampagnen
+              Neue Cold Email<br />Kampagnen
             </h2>
 
             <p className="text-[#86868b] max-w-2xl mx-auto text-lg sm:text-xl leading-relaxed mt-6">
-              3 optimierte Kampagnen mit je 3 E-Mails für GmbH-Geschäftsführer.
-              Jede Mail datenbasiert optimiert für maximale Response Rate.
+              3 komplett neue Kampagnen mit dem Latuszek-Pitch: Gehalt (5.800€)
+              vs Holding (6.900€) vs GmbH ETF-Depot (10.000€). Konkret, produktbezogen, kurz.
             </p>
           </section>
         </AnimatedSection>
@@ -83,6 +84,35 @@ export default function Home() {
         <section className="py-16">
           <StatsBar />
         </section>
+
+        {/* Kern-Pitch */}
+        <AnimatedSection animation="fade">
+          <section className="py-20">
+            <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+              Der Kern-Pitch
+            </h3>
+            <p className="text-[#86868b] mb-12">
+              Wenn Sie 10.000€ aus Ihrer GmbH ausschütten:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+              <div className="rounded-2xl bg-[#1d1d1f] p-6">
+                <p className="text-xs text-[#86868b] font-medium uppercase tracking-widest mb-2">Gehalt</p>
+                <p className="text-3xl font-bold text-white tracking-tight">5.800€</p>
+                <p className="text-sm text-[#86868b] mt-2">Bei 100k p.A. Gehalt</p>
+              </div>
+              <div className="rounded-2xl bg-[#1d1d1f] p-6">
+                <p className="text-xs text-[#86868b] font-medium uppercase tracking-widest mb-2">Holding</p>
+                <p className="text-3xl font-bold text-white tracking-tight">6.900€</p>
+                <p className="text-sm text-[#86868b] mt-2">Abzgl. Gewerbe-/KSt. + 1,5%</p>
+              </div>
+              <div className="rounded-2xl bg-accent/10 border border-accent/20 p-6">
+                <p className="text-xs text-accent font-medium uppercase tracking-widest mb-2">GmbH ETF-Depot</p>
+                <p className="text-3xl font-bold text-accent tracking-tight">10.000€</p>
+                <p className="text-sm text-accent/70 mt-2">100% steuerfrei</p>
+              </div>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Optimizations */}
         <AnimatedSection animation="fade">
@@ -114,7 +144,7 @@ export default function Home() {
         <Tabs defaultValue="1" className="py-20">
           <div className="flex justify-center mb-12">
             <TabsList className="inline-flex rounded-full bg-[#1d1d1f] p-1">
-              {campaigns.map((campaign) => (
+              {neueCampaigns.map((campaign) => (
                 <TabsTrigger
                   key={campaign.id}
                   value={String(campaign.id)}
@@ -127,7 +157,7 @@ export default function Home() {
             </TabsList>
           </div>
 
-          {campaigns.map((campaign) => (
+          {neueCampaigns.map((campaign) => (
             <TabsContent
               key={campaign.id}
               value={String(campaign.id)}
@@ -202,10 +232,10 @@ export default function Home() {
         {/* Footer */}
         <section className="text-center py-24">
           <p className="text-sm text-[#86868b] leading-relaxed">
-            Zielgruppe: GmbH-Geschäftsführer &middot; CTA: Antwort auf E-Mail
+            Zielgruppe: GmbH-Gesch&auml;ftsf&uuml;hrer &middot; CTA: Antwort auf E-Mail
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 mt-4">
-            {["Anrede", "Nachname", "Vorname", "Firmenname", "Branche", "Kerngeschaeft"].map(
+            {["Anrede", "Nachname", "Vorname", "Firmenname", "Branche"].map(
               (p) => (
                 <code
                   key={p}
@@ -217,8 +247,8 @@ export default function Home() {
             )}
           </div>
           <p className="text-xs text-[#48484a] pt-6">
-            Erstellt für Latuszek Finanzberatung GmbH &middot; Alle E-Mails
-            datenbasiert optimiert
+            Erstellt f&uuml;r Latuszek Finanzberatung GmbH &middot; Alle E-Mails
+            datenbasiert optimiert &middot; Basierend auf dem konversionsstärksten Creative
           </p>
         </section>
       </main>

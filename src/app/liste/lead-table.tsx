@@ -3,10 +3,9 @@
 import { useState, useMemo } from "react";
 import { AnimatedSection } from "@/components/animated-section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import leads from "@/data/leads.json";
 import type { Campaign } from "@/data/campaigns";
 
-interface Lead {
+export interface Lead {
   anrede: string;
   kerngeschaeft: string;
   vorname: string;
@@ -18,7 +17,6 @@ interface Lead {
   titel: string;
 }
 
-const typedLeads = leads as Lead[];
 const PAGE_SIZE = 50;
 
 function EmailCard({ email }: { email: Campaign["emails"][0] }) {
@@ -89,7 +87,8 @@ function EmailCard({ email }: { email: Campaign["emails"][0] }) {
   );
 }
 
-export function LeadTable({ campaigns }: { campaigns: Campaign[] }) {
+export function LeadTable({ campaigns, leads }: { campaigns: Campaign[]; leads: Lead[] }) {
+  const typedLeads = leads;
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
 

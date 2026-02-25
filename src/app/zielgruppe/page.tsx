@@ -57,6 +57,12 @@ export default function ZielgruppePage() {
             >
               Liste
             </Link>
+            <Link
+              href="/bau-immo"
+              className="text-sm font-medium text-[#86868b] hover:text-accent transition-colors"
+            >
+              Bau/Immo
+            </Link>
           </nav>
         </div>
       </header>
